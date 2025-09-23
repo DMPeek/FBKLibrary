@@ -106,7 +106,7 @@ function MonsterCard({ monster, level, onLevelChange, statCompare }) {
 
 
 //building individual monster graphs for stat scaling per level
-function StatGraph({ monster, idx }) {
+function StatGraph({ monster }) {
   const chartRef = useRef(null);
 
   //builds and renders individual stat graph in canvas element when monster is selected
