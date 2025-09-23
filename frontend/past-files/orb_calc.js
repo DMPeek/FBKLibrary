@@ -1,12 +1,5 @@
 import {Monsters} from "../src/assets/monsters.js"
 
-const Marshalls = [
-    {
-        id: "Kaiba",
-        hex: "80FFFF"
-    }
-];
-
 //converts hex to numerical RGB values
 function hexToRGB(hex_code) {
     if (hex_code[0] === '#') hex_code = hex_code.slice(1);
