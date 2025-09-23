@@ -247,13 +247,11 @@ export default function Compare() {
     <div>
       <header className="header-bar">
         <div className="header-left">
-          {/* <a href="/" className="logo">FBK<span className="ai-logo">AI</span>ZO</a> */}
           <a href="/" className="logo">FBKaizo Labs</a>
 
         </div>
         <nav className="header-right">
-          <a href="/">Homepage</a>
-          <a href="/Compare">Compare</a>
+          <a href="/">Calculator</a>
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
