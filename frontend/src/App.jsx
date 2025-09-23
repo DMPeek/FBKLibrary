@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import Compare from './components/Compare';
+import Calculator from './components/Calculator';
 import './styles.css'
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/Compare" element={<Compare />} />
+        <Route path="/" element={<Calculator />} />
       </Routes>
       </BrowserRouter>
     </>
