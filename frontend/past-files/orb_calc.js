@@ -1,4 +1,4 @@
-import {Monsters} from "../assets/monsters.js"
+import {Monsters} from "../src/assets/monsters.js"
 
 const Marshalls = [
     {
@@ -17,7 +17,7 @@ function hexToRGB(hex_code) {
     return [r, g, b];
 }
 
-function findClosestMonsters(monsterName, monsters, topN = 15) {
+function findClosestMonsters(monsterName, monsters, topN = 10) {
     // Find the target monster
     const target = monsters.find(m => m.monsterName.toLowerCase() === monsterName.toLowerCase());
     if (!target) {
@@ -42,7 +42,7 @@ function findClosestMonsters(monsterName, monsters, topN = 15) {
             return { Name: m.monsterName, diff };
         });
 
-    // Sort by ascending and get top 15
+    // Sort by ascending and get top 10
     const closest = diffs
         .sort((a, b) => a.diff - b.diff)
         .slice(0, topN);
@@ -52,7 +52,7 @@ function findClosestMonsters(monsterName, monsters, topN = 15) {
     return closest;
 }
 
-// findClosestMonsters("Ansatsu", Monsters); // update "ansatsu" with query from orb page
+findClosestMonsters("Ansatsu", Monsters); // update "ansatsu" with query from orb page
 
 
 
