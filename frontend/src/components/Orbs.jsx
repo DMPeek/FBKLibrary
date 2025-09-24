@@ -12,7 +12,7 @@ function hexToRGB(hex_code) {
     return [r, g, b];
 }
 
-function findClosestMonsters(monsterName, monsters, topN = 10) {
+function findClosestMonsters(monsterName, monsters, topN = 15) {
     // Find the target monster
     const target = monsters.find(m => m.monsterName.toLowerCase() === monsterName.toLowerCase());
     if (!target) {
@@ -52,7 +52,7 @@ function findClosestMonsters(monsterName, monsters, topN = 10) {
 function OrbCard({ monster, cardRGB }) {
     if (!monster) return null;
     return (
-        <div className='monster-card'>
+        <div className='orb-card monster-card'>
             <img className="monster-portrait" src={monster.portrait} alt={`${monster.monsterName} portrait`} />
             <h2>{monster.monsterName}</h2>
             <div className="orb-fields-grid">
@@ -67,7 +67,7 @@ function OrbCard({ monster, cardRGB }) {
 function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv }) {
     if (!monster) return null;
     return (
-        <div className='monster-card'>
+        <div className='orb-card monster-card'>
             <img className="monster-portrait" src={monster.portrait} alt={`${monster.monsterName} portrait`} />
             <h2>{}{monster.monsterName}</h2>
             <div className='monster-field total-value'><span>Total Diff:</span> <span>{tDiff}</span></div>
@@ -113,57 +113,61 @@ export default function Orbs() {
             </header>
             <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
                 <div className="orb-holder">
-                    <div className="monster-search">
-                        <input
-                            type="text"
-                            value={query}
-                            onChange={e => {
-                                setSearch(e.target.value);
-                                setIsDropdownOpen([true, isDropdownOpen[1]]);
-                            }}
-                            onFocus={() => setIsDropdownOpen([true, isDropdownOpen[1]])}
-                            onBlur={() => setTimeout(() => setIsDropdownOpen([false, isDropdownOpen[1]]), 120)}
-                            onKeyDown={e => {
-                                if (e.key === "Enter") {
-                                    setIsDropdownOpen([false, isDropdownOpen[1]]);
-                                    const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
-                                    if (match) {
-                                        setSelectedMonsters([match, selectedMonsters[1]]);
-                                        setMonRGB(hexToRGB(match.hex));
-                                        setSearch(match.monsterName);
+                    <div className='orb-search-bar'>
+                        <div className="monster-search">
+                            <input
+                                type="text"
+                                value={query}
+                                onChange={e => {
+                                    setSearch(e.target.value);
+                                    setIsDropdownOpen([true, isDropdownOpen[1]]);
+                                }}
+                                onFocus={() => setIsDropdownOpen([true, isDropdownOpen[1]])}
+                                onBlur={() => setTimeout(() => setIsDropdownOpen([false, isDropdownOpen[1]]), 120)}
+                                onKeyDown={e => {
+                                    if (e.key === "Enter") {
+                                        setIsDropdownOpen([false, isDropdownOpen[1]]);
+                                        const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
+                                        if (match) {
+                                            setSelectedMonsters([match, selectedMonsters[1]]);
+                                            setMonRGB(hexToRGB(match.hex));
+                                            setSearch(match.monsterName);
+                                        }
                                     }
-                                }
-                            }}
-                            placeholder="Search monster..."
-                            autoComplete="off"
-                        />
-                        <ul className={`monster-dropdown dropdown-list${isDropdownOpen[0] && filteredMonsters.length > 0 ? ' show' : ''}`}>
-                            {filteredMonsters.map(monster => (
-                                <li key={monster.monsterName} onMouseDown={() => {
-                                    setSelectedMonsters([monster, selectedMonsters[1]]);
-                                    setMonRGB(hexToRGB(monster.hex));
-                                    setSearch(monster.monsterName);
-                                    setIsDropdownOpen([false, isDropdownOpen[1]]);
-                                }}>{monster.monsterName}</li>
-                            ))}
-                        </ul>
+                                }}
+                                placeholder="Search monster..."
+                                autoComplete="off"
+                            />
+                            <ul className={`monster-dropdown dropdown-list${isDropdownOpen[0] && filteredMonsters.length > 0 ? ' show' : ''}`}>
+                                {filteredMonsters.map(monster => (
+                                    <li key={monster.monsterName} onMouseDown={() => {
+                                        setSelectedMonsters([monster, selectedMonsters[1]]);
+                                        setMonRGB(hexToRGB(monster.hex));
+                                        setSearch(monster.monsterName);
+                                        setIsDropdownOpen([false, isDropdownOpen[1]]);
+                                    }}>{monster.monsterName}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                     <OrbCard
                         monster={selectedMonsters[0]}
                         cardRGB={monRGB}
                     />
-                    <div>
-                        {orbResults.map((result, idx) => (
-                            <ResultCard
-                                key={idx}
-                                monster={result.Name}
-                                cardRGB={result.rgb}
-                                tDiff={result.totalDiff}
-                                rv={result.rdiff}
-                                gv={result.gdiff}
-                                bv={result.bdiff}
-                            />
-                        ))}
+                    <div style={{ width: '100%', marginTop: '48px', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start' }}>
+                        <div className='orb-results-grid'>
+                            {orbResults.map((result, idx) => (
+                                <ResultCard
+                                    key={idx}
+                                    monster={result.Name}
+                                    cardRGB={result.rgb}
+                                    tDiff={result.totalDiff}
+                                    rv={result.rdiff}
+                                    gv={result.gdiff}
+                                    bv={result.bdiff}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </main>

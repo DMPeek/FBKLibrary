@@ -3617,7 +3617,7 @@ export const Monsters = [
 {
   "": 139,
   monsterName: "Sanga of the Thunder",
-  portrait: `/src/assets/Monster Portraits/Sanga of the Thunder.png`,
+  portrait: `/src/assets/Monster Portraits/Sanga the Thunder.png`,
   class: "Spirit",
   hp: 1400,
   atk: 2600,

@@ -4,6 +4,18 @@ html, body {
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Monster card grid for compact stats */
 .monster-fields-grid {
     display: grid;
@@ -145,6 +157,12 @@ body {
     margin-bottom: 1.5rem;
     position: relative;
 }
+
+.orb-search-bar {
+    width: 320px;
+    margin-bottom: 16px;
+}
+
 .monster-search input,
 .monster-search .monster-search-input {
     width: 100%;
@@ -204,6 +222,21 @@ body {
     transition: box-shadow 0.2s;
     /* width and height reverted to allow natural sizing */
 }
+
+.orb-card {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    margin-bottom: 16px;
+    height: auto;
+    max-height: 250px;
+}
+
+.orb-card.monster-card {
+    height: auto;
+    max-height: 250px;
+}
+
 .monster-card.hidden {
     display: none;
 }
@@ -521,8 +554,11 @@ body.lvl-calc .comparison-graphs-grid canvas {
     height: 550px;
 }
 .orb-holder {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
 }
 
 .monster-search {
@@ -677,6 +713,15 @@ body.lvl-calc .comparison-graphs-grid canvas {
     justify-content: center;
     width: 900px;
     margin-right: 180px;
+}
+
+.orb-results-grid {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr;
+    grid-template-rows: 3fr 3fr 3fr 3fr fr;
+    gap: 20px;
+    justify-content: center;
+    width: 75vw;
 }
 
 
