@@ -3,7 +3,7 @@ export const Monsters = [
 {
   "": 0,
   monsterName: "Alpha The Magnet Warrior",
-  portrait: `/src/assets/Monster Portraits/Alpha The Magnet Warrior.png`,
+  portrait: `/MonsterPortraits/Alpha the Magnet Warrior.png`,
   class: "Machine",
   hp: 850,
   atk: 1400,
@@ -29,7 +29,7 @@ export const Monsters = [
 {
   "": 1,
   monsterName: "Ansatsu",
-  portrait: `/src/assets/Monster Portraits/Ansatsu.png`,
+  portrait: `/MonsterPortraits/Ansatsu.png`,
   class: "Warrior",
   hp: 830,
   atk: 1700,
@@ -55,7 +55,7 @@ export const Monsters = [
 {
   "": 2,
   monsterName: "Aqua Dragon",
-  portrait: `/src/assets/Monster Portraits/Aqua Dragon.png`,
+  portrait: `/MonsterPortraits/Aqua Dragon.png`,
   class: "Dragon",
   hp: 1300,
   atk: 2250,
@@ -81,7 +81,7 @@ export const Monsters = [
 {
   "": 3,
   monsterName: "Aqua Madoor",
-  portrait: `/src/assets/Monster Portraits/Aqua Madoor.png`,
+  portrait: `/MonsterPortraits/Aqua Madoor.png`,
   class: "Spellcaster",
   hp: 1100,
   atk: 1200,
@@ -107,7 +107,7 @@ export const Monsters = [
 {
   "": 4,
   monsterName: "Armored Lizard",
-  portrait: `/src/assets/Monster Portraits/Armored Lizard.png`,
+  portrait: `/MonsterPortraits/Armored Lizard.png`,
   class: "Beast",
   hp: 950,
   atk: 1500,
@@ -133,7 +133,7 @@ export const Monsters = [
 {
   "": 5,
   monsterName: "Armored Zombie",
-  portrait: `/src/assets/Monster Portraits/Armored Zombie.png`,
+  portrait: `/MonsterPortraits/Armored Zombie.png`,
   class: "Fiend",
   hp: 1100,
   atk: 1500,
@@ -159,7 +159,7 @@ export const Monsters = [
 {
   "": 6,
   monsterName: "Axe Raider",
-  portrait: `/src/assets/Monster Portraits/Axe Raider.png`,
+  portrait: `/MonsterPortraits/Axe Raider.png`,
   class: "Warrior",
   hp: 950,
   atk: 1700,
@@ -185,7 +185,7 @@ export const Monsters = [
 {
   "": 7,
   monsterName: "Baby Dragon",
-  portrait: `/src/assets/Monster Portraits/Baby Dragon.png`,
+  portrait: `/MonsterPortraits/Baby Dragon.png`,
   class: "Dragon",
   hp: 750,
   atk: 1200,
@@ -211,7 +211,7 @@ export const Monsters = [
 {
   "": 8,
   monsterName: "Barrel Dragon",
-  portrait: `/src/assets/Monster Portraits/Barrel Dragon.png`,
+  portrait: `/MonsterPortraits/Barrel Dragon.png`,
   class: "Machine",
   hp: 1400,
   atk: 2600,
@@ -237,7 +237,7 @@ export const Monsters = [
 {
   "": 9,
   monsterName: "Basic Insect",
-  portrait: `/src/assets/Monster Portraits/Basic Insect.png`,
+  portrait: `/MonsterPortraits/Basic Insect.png`,
   class: "Beast",
   hp: 950,
   atk: 500,
@@ -263,7 +263,7 @@ export const Monsters = [
 {
   "": 10,
   monsterName: "Battle Ox",
-  portrait: `/src/assets/Monster Portraits/Battle Ox.png`,
+  portrait: `/MonsterPortraits/Battle Ox.png`,
   class: "Warrior",
   hp: 1000,
   atk: 1700,
@@ -289,7 +289,7 @@ export const Monsters = [
 {
   "": 11,
   monsterName: "Beast of Gilfer",
-  portrait: `/src/assets/Monster Portraits/Beast of Gilfer.png`,
+  portrait: `/MonsterPortraits/Beast of Gilfer.png`,
   class: "Fiend",
   hp: 1200,
   atk: 2200,
@@ -315,7 +315,7 @@ export const Monsters = [
 {
   "": 12,
   monsterName: "Beastking of the Swamps",
-  portrait: `/src/assets/Monster Portraits/Beastking of the Swamps.png`,
+  portrait: `/MonsterPortraits/Beastking of the Swamps.png`,
   class: "Beast",
   hp: 750,
   atk: 1000,
@@ -341,7 +341,7 @@ export const Monsters = [
 {
   "": 13,
   monsterName: "Beaver Warrior",
-  portrait: `/src/assets/Monster Portraits/Beaver Warrior.png`,
+  portrait: `/MonsterPortraits/Beaver Warrior.png`,
   class: "Warrior",
   hp: 900,
   atk: 1200,
@@ -367,7 +367,7 @@ export const Monsters = [
 {
   "": 14,
   monsterName: "Berfomet",
-  portrait: `/src/assets/Monster Portraits/Berfomet.png`,
+  portrait: `/MonsterPortraits/Berfomet.png`,
   class: "Fiend",
   hp: 900,
   atk: 1400,
@@ -393,7 +393,7 @@ export const Monsters = [
 {
   "": 15,
   monsterName: "Beta The Magnet Warrior",
-  portrait: `/src/assets/Monster Portraits/Beta The Magnet Warrior.png`,
+  portrait: `/MonsterPortraits/Beta the Magnet Warrior.png`,
   class: "Machine",
   hp: 850,
   atk: 1700,
@@ -419,7 +419,7 @@ export const Monsters = [
 {
   "": 16,
   monsterName: "Bickuribox",
-  portrait: `/src/assets/Monster Portraits/Bickuribox.png`,
+  portrait: `/MonsterPortraits/Bickuribox.png`,
   class: "Fiend",
   hp: 1200,
   atk: 2300,
@@ -445,7 +445,7 @@ export const Monsters = [
 {
   "": 17,
   monsterName: "Big Insect",
-  portrait: `/src/assets/Monster Portraits/Big Insect.png`,
+  portrait: `/MonsterPortraits/Big Insect.png`,
   class: "Beast",
   hp: 950,
   atk: 1200,
@@ -471,7 +471,7 @@ export const Monsters = [
 {
   "": 18,
   monsterName: "Black Luster Soldier",
-  portrait: `/src/assets/Monster Portraits/Black Luster Soldier.png`,
+  portrait: `/MonsterPortraits/Black Luster Soldier.png`,
   class: "Warrior",
   hp: 1850,
   atk: 3000,
@@ -497,7 +497,7 @@ export const Monsters = [
 {
   "": 19,
   monsterName: "Black Skull Dragon",
-  portrait: `/src/assets/Monster Portraits/Black Skull Dragon.png`,
+  portrait: `/MonsterPortraits/Black Skull Dragon.png`,
   class: "Dragon",
   hp: 2200,
   atk: 3200,
@@ -523,7 +523,7 @@ export const Monsters = [
 {
   "": 20,
   monsterName: "Blackland Fire Dragon",
-  portrait: `/src/assets/Monster Portraits/Blackland Fire Dragon.png`,
+  portrait: `/MonsterPortraits/Blackland Fire Dragon.png`,
   class: "Dragon",
   hp: 850,
   atk: 1500,
@@ -549,7 +549,7 @@ export const Monsters = [
 {
   "": 21,
   monsterName: "Blue-Eyes Ultimate Dragon",
-  portrait: `/src/assets/Monster Portraits/Blue-Eyes Ultimate Dragon.png`,
+  portrait: `/MonsterPortraits/Blue-Eyes Ultimate Dragon.png`,
   class: "Dragon",
   hp: 3000,
   atk: 4500,
@@ -575,7 +575,7 @@ export const Monsters = [
 {
   "": 22,
   monsterName: "Blue-Eyes White Dragon (Azrael)",
-  portrait: `/src/assets/Monster Portraits/Blue-Eyes White Dragon 1.png`,
+  portrait: `/MonsterPortraits/Blue-Eyes White Dragon 1.png`,
   class: "Dragon",
   hp: 1900,
   atk: 3000,
@@ -601,7 +601,7 @@ export const Monsters = [
 {
   "": 23,
   monsterName: "Blue-Eyes White Dragon (Djibril)",
-  portrait: `/src/assets/Monster Portraits/Blue-Eyes White Dragon 2.png`,
+  portrait: `/MonsterPortraits/Blue-Eyes White Dragon 2.png`,
   class: "Dragon",
   hp: 1800,
   atk: 3000,
@@ -627,7 +627,7 @@ export const Monsters = [
 {
   "": 24,
   monsterName: "Blue-Eyes White Dragon (Ibris)",
-  portrait: `/src/assets/Monster Portraits/Blue-Eyes White Dragon 3.png`,
+  portrait: `/MonsterPortraits/Blue-Eyes White Dragon 3.png`,
   class: "Dragon",
   hp: 1800,
   atk: 3000,
@@ -653,7 +653,7 @@ export const Monsters = [
 {
   "": 25,
   monsterName: "Breaker the Magical Warrior",
-  portrait: `/src/assets/Monster Portraits/Breaker the Magical Warrior.png`,
+  portrait: `/MonsterPortraits/Breaker the Magical Warrior.png`,
   class: "Spellcaster",
   hp: 800,
   atk: 1600,
@@ -679,7 +679,7 @@ export const Monsters = [
 {
   "": 26,
   monsterName: "Buster Blader",
-  portrait: `/src/assets/Monster Portraits/Buster Blader.png`,
+  portrait: `/MonsterPortraits/Buster Blader.png`,
   class: "Warrior",
   hp: 1300,
   atk: 2600,
@@ -705,7 +705,7 @@ export const Monsters = [
 {
   "": 27,
   monsterName: "Castle of Dark Illusions",
-  portrait: `/src/assets/Monster Portraits/Castle of Dark Illusions.png`,
+  portrait: `/MonsterPortraits/Castle of Dark Illusions.png`,
   class: "Fiend",
   hp: 1500,
   atk: 1200,
@@ -731,7 +731,7 @@ export const Monsters = [
 {
   "": 28,
   monsterName: "Celtic Guardian",
-  portrait: `/src/assets/Monster Portraits/Celtic Guardian.png`,
+  portrait: `/MonsterPortraits/Celtic Guardian.png`,
   class: "Warrior",
   hp: 800,
   atk: 1400,
@@ -757,7 +757,7 @@ export const Monsters = [
 {
   "": 29,
   monsterName: "Chimera the Flying Mythical Beast",
-  portrait: `/src/assets/Monster Portraits/Chimera the Flying Mythical Beast.png`,
+  portrait: `/MonsterPortraits/Chimera the Flying Mythical Beast.png`,
   class: "Beast",
   hp: 1400,
   atk: 2100,
@@ -783,7 +783,7 @@ export const Monsters = [
 {
   "": 30,
   monsterName: "Cosmo Queen",
-  portrait: `/src/assets/Monster Portraits/Cosmo Queen.png`,
+  portrait: `/MonsterPortraits/Cosmo Queen.png`,
   class: "Spellcaster",
   hp: 1800,
   atk: 2900,
@@ -809,7 +809,7 @@ export const Monsters = [
 {
   "": 31,
   monsterName: "Crawling Dragon",
-  portrait: `/src/assets/Monster Portraits/Crawling Dragon.png`,
+  portrait: `/MonsterPortraits/Crawling Dragon.png`,
   class: "Dragon",
   hp: 1050,
   atk: 1600,
@@ -835,7 +835,7 @@ export const Monsters = [
 {
   "": 32,
   monsterName: "Crimson Sunbird",
-  portrait: `/src/assets/Monster Portraits/Crimson Sunbird.png`,
+  portrait: `/MonsterPortraits/Crimson Sunbird.png`,
   class: "Beast",
   hp: 1350,
   atk: 2300,
@@ -861,7 +861,7 @@ export const Monsters = [
 {
   "": 33,
   monsterName: "Curse of Dragon",
-  portrait: `/src/assets/Monster Portraits/Curse of Dragon.png`,
+  portrait: `/MonsterPortraits/Curse of Dragon.png`,
   class: "Dragon",
   hp: 1200,
   atk: 2000,
@@ -887,7 +887,7 @@ export const Monsters = [
 {
   "": 34,
   monsterName: "Cyber Commander",
-  portrait: `/src/assets/Monster Portraits/Cyber Commander.png`,
+  portrait: `/MonsterPortraits/Cyber Commander.png`,
   class: "Warrior",
   hp: 550,
   atk: 750,
@@ -913,7 +913,7 @@ export const Monsters = [
 {
   "": 35,
   monsterName: "Cyber Saurus",
-  portrait: `/src/assets/Monster Portraits/Cyber Saurus.png`,
+  portrait: `/MonsterPortraits/Cyber Saurus.png`,
   class: "Machine",
   hp: 1100,
   atk: 1800,
@@ -939,7 +939,7 @@ export const Monsters = [
 {
   "": 36,
   monsterName: "Cyber Soldier",
-  portrait: `/src/assets/Monster Portraits/Cyber Soldier.png`,
+  portrait: `/MonsterPortraits/Cyber Soldier.png`,
   class: "Machine",
   hp: 1000,
   atk: 1500,
@@ -965,7 +965,7 @@ export const Monsters = [
 {
   "": 37,
   monsterName: "Dancing Elf",
-  portrait: `/src/assets/Monster Portraits/Dancing Elf.png`,
+  portrait: `/MonsterPortraits/Dancing Elf.png`,
   class: "Spirit",
   hp: 520,
   atk: 300,
@@ -991,7 +991,7 @@ export const Monsters = [
 {
   "": 38,
   monsterName: "Dark Elf",
-  portrait: `/src/assets/Monster Portraits/Dark Elf.png`,
+  portrait: `/MonsterPortraits/Dark Elf.png`,
   class: "Spellcaster",
   hp: 1000,
   atk: 2000,
@@ -1017,7 +1017,7 @@ export const Monsters = [
 {
   "": 39,
   monsterName: "Dark King of the Abyss",
-  portrait: `/src/assets/Monster Portraits/Dark King of the Abyss.png`,
+  portrait: `/MonsterPortraits/Dark King of the Abyss.png`,
   class: "Fiend",
   hp: 1000,
   atk: 1200,
@@ -1043,7 +1043,7 @@ export const Monsters = [
 {
   "": 40,
   monsterName: "Dark Magician",
-  portrait: `/src/assets/Monster Portraits/Dark Magician.png`,
+  portrait: `/MonsterPortraits/Dark Magician.png`,
   class: "Spellcaster",
   hp: 1200,
   atk: 2500,
@@ -1069,7 +1069,7 @@ export const Monsters = [
 {
   "": 41,
   monsterName: "Dark Magician Girl",
-  portrait: `/src/assets/Monster Portraits/Dark Magician Girl.png`,
+  portrait: `/MonsterPortraits/Dark Magician Girl.png`,
   class: "Spellcaster",
   hp: 1000,
   atk: 2000,
@@ -1095,7 +1095,7 @@ export const Monsters = [
 {
   "": 42,
   monsterName: "Dark Paladin",
-  portrait: `/src/assets/Monster Portraits/Dark Paladin.png`,
+  portrait: `/MonsterPortraits/Dark Paladin.png`,
   class: "Spellcaster",
   hp: 1800,
   atk: 2900,
@@ -1121,7 +1121,7 @@ export const Monsters = [
 {
   "": 43,
   monsterName: "Dark Rabbit",
-  portrait: `/src/assets/Monster Portraits/Dark Rabbit.png`,
+  portrait: `/MonsterPortraits/Dark Rabbit.png`,
   class: "Beast",
   hp: 800,
   atk: 1100,
@@ -1147,7 +1147,7 @@ export const Monsters = [
 {
   "": 44,
   monsterName: "Dark Witch",
-  portrait: `/src/assets/Monster Portraits/Dark Witch.png`,
+  portrait: `/MonsterPortraits/Dark Witch.png`,
   class: "Spirit",
   hp: 1000,
   atk: 1800,
@@ -1173,7 +1173,7 @@ export const Monsters = [
 {
   "": 45,
   monsterName: "Dharma Cannon",
-  portrait: `/src/assets/Monster Portraits/Dharma Cannon.png`,
+  portrait: `/MonsterPortraits/Dharma Cannon.png`,
   class: "Machine",
   hp: 600,
   atk: 900,
@@ -1199,7 +1199,7 @@ export const Monsters = [
 {
   "": 46,
   monsterName: "Dragon Piper",
-  portrait: `/src/assets/Monster Portraits/Dragon Piper.png`,
+  portrait: `/MonsterPortraits/Dragon Piper.png`,
   class: "Spellcaster",
   hp: 1050,
   atk: 200,
@@ -1225,7 +1225,7 @@ export const Monsters = [
 {
   "": 47,
   monsterName: "Dragon Zombie",
-  portrait: `/src/assets/Monster Portraits/Dragon Zombie.png`,
+  portrait: `/MonsterPortraits/Dragon Zombie.png`,
   class: "Fiend",
   hp: 1300,
   atk: 1600,
@@ -1251,7 +1251,7 @@ export const Monsters = [
 {
   "": 48,
   monsterName: "Dunames Dark Witch",
-  portrait: `/src/assets/Monster Portraits/Dunames Dark Witch.png`,
+  portrait: `/MonsterPortraits/Dunames Dark Witch.png`,
   class: "Spirit",
   hp: 950,
   atk: 1800,
@@ -1277,7 +1277,7 @@ export const Monsters = [
 {
   "": 49,
   monsterName: "Dungeon Worm",
-  portrait: `/src/assets/Monster Portraits/Dungeon Worm.png`,
+  portrait: `/MonsterPortraits/Dungeon Worm.png`,
   class: "Beast",
   hp: 1080,
   atk: 1800,
@@ -1303,7 +1303,7 @@ export const Monsters = [
 {
   "": 50,
   monsterName: "Elemental Hero Neos",
-  portrait: `/src/assets/Monster Portraits/Elemental Hero Neos.png`,
+  portrait: `/MonsterPortraits/Elemental Hero Neos.png`,
   class: "Warrior",
   hp: 1200,
   atk: 2500,
@@ -1329,7 +1329,7 @@ export const Monsters = [
 {
   "": 51,
   monsterName: "Embodiment of Apophis",
-  portrait: `/src/assets/Monster Portraits/Embodiment of Apophis.png`,
+  portrait: `/MonsterPortraits/Embodiment of Apophis.png`,
   class: "Spirit",
   hp: 950,
   atk: 1600,
@@ -1355,7 +1355,7 @@ export const Monsters = [
 {
   "": 52,
   monsterName: "Enchanting Mermaid",
-  portrait: `/src/assets/Monster Portraits/Enchanting Mermaid.png`,
+  portrait: `/MonsterPortraits/Enchanting Mermaid.png`,
   class: "Spirit",
   hp: 730,
   atk: 1200,
@@ -1381,7 +1381,7 @@ export const Monsters = [
 {
   "": 53,
   monsterName: "Fairy King Truesdale",
-  portrait: `/src/assets/Monster Portraits/Fairy King Truesdale.png`,
+  portrait: `/MonsterPortraits/Fairy King Truesdale.png`,
   class: "Spirit",
   hp: 1000,
   atk: 2200,
@@ -1407,7 +1407,7 @@ export const Monsters = [
 {
   "": 54,
   monsterName: "Fairy's Gift",
-  portrait: `/src/assets/Monster Portraits/Fairy's Gift.png`,
+  portrait: `/MonsterPortraits/Fairy's Gift.png`,
   class: "Spirit",
   hp: 800,
   atk: 1400,
@@ -1433,7 +1433,7 @@ export const Monsters = [
 {
   "": 55,
   monsterName: "Feral Imp",
-  portrait: `/src/assets/Monster Portraits/Feral Imp.png`,
+  portrait: `/MonsterPortraits/Feral Imp.png`,
   class: "Fiend",
   hp: 800,
   atk: 1300,
@@ -1459,7 +1459,7 @@ export const Monsters = [
 {
   "": 56,
   monsterName: "Fiend Kraken",
-  portrait: `/src/assets/Monster Portraits/Fiend Kraken.png`,
+  portrait: `/MonsterPortraits/Fiend Kraken.png`,
   class: "Beast",
   hp: 850,
   atk: 1200,
@@ -1485,7 +1485,7 @@ export const Monsters = [
 {
   "": 57,
   monsterName: "Flame Cerebrus",
-  portrait: `/src/assets/Monster Portraits/Flame Cerebrus.png`,
+  portrait: `/MonsterPortraits/Flame Cerebrus.png`,
   class: "Spirit",
   hp: 1200,
   atk: 2100,
@@ -1511,7 +1511,7 @@ export const Monsters = [
 {
   "": 58,
   monsterName: "Flame Swordsman",
-  portrait: `/src/assets/Monster Portraits/Flame Swordsman.png`,
+  portrait: `/MonsterPortraits/Flame Swordsman.png`,
   class: "Warrior",
   hp: 900,
   atk: 1800,
@@ -1537,7 +1537,7 @@ export const Monsters = [
 {
   "": 59,
   monsterName: "Fortress Whale",
-  portrait: `/src/assets/Monster Portraits/Fortress Whale.png`,
+  portrait: `/MonsterPortraits/Fortress Whale.png`,
   class: "Machine",
   hp: 1400,
   atk: 2350,
@@ -1563,7 +1563,7 @@ export const Monsters = [
 {
   "": 60,
   monsterName: "Gaia the Dragon Champion",
-  portrait: `/src/assets/Monster Portraits/Gaia the Dragon Champion.png`,
+  portrait: `/MonsterPortraits/Gaia the Dragon Champion.png`,
   class: "Warrior",
   hp: 1650,
   atk: 2600,
@@ -1589,7 +1589,7 @@ export const Monsters = [
 {
   "": 61,
   monsterName: "Gaia the Fierce Knight",
-  portrait: `/src/assets/Monster Portraits/Gaia the Fierce Knight.png`,
+  portrait: `/MonsterPortraits/Gaia the Fierce Knight.png`,
   class: "Warrior",
   hp: 1300,
   atk: 2300,
@@ -1615,7 +1615,7 @@ export const Monsters = [
 {
   "": 62,
   monsterName: "Gamma The Magnet Warrior",
-  portrait: `/src/assets/Monster Portraits/Gamma The Magnet Warrior.png`,
+  portrait: `/MonsterPortraits/Gamma the Magnet Warrior.png`,
   class: "Machine",
   hp: 900,
   atk: 1500,
@@ -1641,7 +1641,7 @@ export const Monsters = [
 {
   "": 63,
   monsterName: "Garoozis",
-  portrait: `/src/assets/Monster Portraits/Garoozis.png`,
+  portrait: `/MonsterPortraits/Garoozis.png`,
   class: "Warrior",
   hp: 1000,
   atk: 1800,
@@ -1667,7 +1667,7 @@ export const Monsters = [
 {
   "": 64,
   monsterName: "Gate Guardian",
-  portrait: `/src/assets/Monster Portraits/Gate Guardian.png`,
+  portrait: `/MonsterPortraits/Gate Guardian.png`,
   class: "Spirit",
   hp: 2500,
   atk: 3750,
@@ -1693,7 +1693,7 @@ export const Monsters = [
 {
   "": 65,
   monsterName: "Gazelle the King of Mythical Beasts",
-  portrait: `/src/assets/Monster Portraits/Gazelle the King of Mythical Beasts.png`,
+  portrait: `/MonsterPortraits/Gazelle the King of Mythical Beasts.png`,
   class: "Beast",
   hp: 750,
   atk: 1500,
@@ -1719,7 +1719,7 @@ export const Monsters = [
 {
   "": 66,
   monsterName: "Gemini Elf Kachua",
-  portrait: `/src/assets/Monster Portraits/Gemini Elf 2.png`,
+  portrait: `/MonsterPortraits/Gemini Elf 2.png`,
   class: "Spellcaster",
   hp: 730,
   atk: 1000,
@@ -1745,7 +1745,7 @@ export const Monsters = [
 {
   "": 67,
   monsterName: "Gemini Elf Lora",
-  portrait: `/src/assets/Monster Portraits/Gemini Elf 1.png`,
+  portrait: `/MonsterPortraits/Gemini Elf 1.png`,
   class: "Spellcaster",
   hp: 700,
   atk: 900,
@@ -1771,7 +1771,7 @@ export const Monsters = [
 {
   "": 68,
   monsterName: "Ghoul with an Appetite",
-  portrait: `/src/assets/Monster Portraits/Ghoul with an Appetite.png`,
+  portrait: `/MonsterPortraits/Ghoul with an Appetite.png`,
   class: "Fiend",
   hp: 1100,
   atk: 1600,
@@ -1797,7 +1797,7 @@ export const Monsters = [
 {
   "": 69,
   monsterName: "Giant Mech-Soldier",
-  portrait: `/src/assets/Monster Portraits/Giant Mech-Soldier.png`,
+  portrait: `/MonsterPortraits/Giant Mech-Soldier.png`,
   class: "Machine",
   hp: 1150,
   atk: 1750,
@@ -1823,7 +1823,7 @@ export const Monsters = [
 {
   "": 70,
   monsterName: "Giant Red Seasnake",
-  portrait: `/src/assets/Monster Portraits/Giant Red Seasnake.png`,
+  portrait: `/MonsterPortraits/Giant Red Seasnake.png`,
   class: "Beast",
   hp: 1050,
   atk: 1800,
@@ -1849,7 +1849,7 @@ export const Monsters = [
 {
   "": 71,
   monsterName: "Giant Soldier of Stone",
-  portrait: `/src/assets/Monster Portraits/Giant Soldier of Stone.png`,
+  portrait: `/MonsterPortraits/Giant Soldier of Stone.png`,
   class: "Spirit",
   hp: 1200,
   atk: 1300,
@@ -1875,7 +1875,7 @@ export const Monsters = [
 {
   "": 72,
   monsterName: "Giltia the D. Knight",
-  portrait: `/src/assets/Monster Portraits/Giltia the D. Knight.png`,
+  portrait: `/MonsterPortraits/Giltia the D. Knight.png`,
   class: "Warrior",
   hp: 1000,
   atk: 1850,
@@ -1901,7 +1901,7 @@ export const Monsters = [
 {
   "": 73,
   monsterName: "Gyakutenno Megami",
-  portrait: `/src/assets/Monster Portraits/Gyakutenno Megami.png`,
+  portrait: `/MonsterPortraits/Gyakutenno Megami.png`,
   class: "Spirit",
   hp: 1000,
   atk: 1800,
@@ -1927,7 +1927,7 @@ export const Monsters = [
 {
   "": 74,
   monsterName: "Hane-Hane",
-  portrait: `/src/assets/Monster Portraits/Hane-Hane.png`,
+  portrait: `/MonsterPortraits/Hane-Hane.png`,
   class: "Spirit",
   hp: 560,
   atk: 450,
@@ -1953,7 +1953,7 @@ export const Monsters = [
 {
   "": 75,
   monsterName: "Harpie Lady Airo",
-  portrait: `/src/assets/Monster Portraits/Harpie Lady Airo.png`,
+  portrait: `/MonsterPortraits/Harpie Lady Airo.png`,
   class: "Beast",
   hp: 780,
   atk: 1300,
@@ -1979,7 +1979,7 @@ export const Monsters = [
 {
   "": 76,
   monsterName: "Harpie Lady Keraino",
-  portrait: `/src/assets/Monster Portraits/Harpie Lady Keraino.png`,
+  portrait: `/MonsterPortraits/Harpie Lady Keraino.png`,
   class: "Beast",
   hp: 780,
   atk: 1300,
@@ -2005,7 +2005,7 @@ export const Monsters = [
 {
   "": 77,
   monsterName: "Harpie Lady Ocupete",
-  portrait: `/src/assets/Monster Portraits/Harpie Lady Ocupete.png`,
+  portrait: `/MonsterPortraits/Harpie Lady Ocupete.png`,
   class: "Beast",
   hp: 780,
   atk: 1300,
@@ -2031,7 +2031,7 @@ export const Monsters = [
 {
   "": 78,
   monsterName: "Harpie's Pet Dragon",
-  portrait: `/src/assets/Monster Portraits/Harpie's Pet Dragon.png`,
+  portrait: `/MonsterPortraits/Harpie's Pet Dragon.png`,
   class: "Dragon",
   hp: 1250,
   atk: 2000,
@@ -2057,7 +2057,7 @@ export const Monsters = [
 {
   "": 79,
   monsterName: "Hercules Beetle",
-  portrait: `/src/assets/Monster Portraits/Hercules Beetle.png`,
+  portrait: `/MonsterPortraits/Hercules Beetle.png`,
   class: "Beast",
   hp: 1150,
   atk: 1500,
@@ -2083,7 +2083,7 @@ export const Monsters = [
 {
   "": 80,
   monsterName: "Hitotsu-Me Giant",
-  portrait: `/src/assets/Monster Portraits/Hitotsu-Me Giant.png`,
+  portrait: `/MonsterPortraits/Hitotsu-Me Giant.png`,
   class: "Warrior",
   hp: 1200,
   atk: 1200,
@@ -2109,7 +2109,7 @@ export const Monsters = [
 {
   "": 81,
   monsterName: "Horn Imp",
-  portrait: `/src/assets/Monster Portraits/Horn Imp.png`,
+  portrait: `/MonsterPortraits/Horn Imp.png`,
   class: "Fiend",
   hp: 750,
   atk: 1300,
@@ -2135,7 +2135,7 @@ export const Monsters = [
 {
   "": 82,
   monsterName: "Hunter Spider",
-  portrait: `/src/assets/Monster Portraits/Hunter Spider.png`,
+  portrait: `/MonsterPortraits/Hunter Spider.png`,
   class: "Beast",
   hp: 950,
   atk: 1600,
@@ -2161,7 +2161,7 @@ export const Monsters = [
 {
   "": 83,
   monsterName: "Illusionist Faceless Mage",
-  portrait: `/src/assets/Monster Portraits/Illusionist Faceless Mage.png`,
+  portrait: `/MonsterPortraits/Illusionist Faceless Mage.png`,
   class: "Spellcaster",
   hp: 1250,
   atk: 1200,
@@ -2187,7 +2187,7 @@ export const Monsters = [
 {
   "": 84,
   monsterName: "Insect Queen",
-  portrait: `/src/assets/Monster Portraits/Insect Queen.png`,
+  portrait: `/MonsterPortraits/Insect Queen.png`,
   class: "Beast",
   hp: 1400,
   atk: 2200,
@@ -2213,7 +2213,7 @@ export const Monsters = [
 {
   "": 85,
   monsterName: "Invitation to a Dark Sleep",
-  portrait: `/src/assets/Monster Portraits/Invitation to a Dark Sleep.png`,
+  portrait: `/MonsterPortraits/Invitation to a Dark Sleep.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1500,
@@ -2239,7 +2239,7 @@ export const Monsters = [
 {
   "": 86,
   monsterName: "Jinzo",
-  portrait: `/src/assets/Monster Portraits/Jinzo.png`,
+  portrait: `/MonsterPortraits/Jinzo.png`,
   class: "Machine",
   hp: 1200,
   atk: 2400,
@@ -2265,7 +2265,7 @@ export const Monsters = [
 {
   "": 87,
   monsterName: "Judge Man",
-  portrait: `/src/assets/Monster Portraits/Judge Man.png`,
+  portrait: `/MonsterPortraits/Judge Man.png`,
   class: "Warrior",
   hp: 1300,
   atk: 2200,
@@ -2291,7 +2291,7 @@ export const Monsters = [
 {
   "": 88,
   monsterName: "Kairyu-Shin",
-  portrait: `/src/assets/Monster Portraits/Kairyu-Shin.png`,
+  portrait: `/MonsterPortraits/Kairyu-Shin.png`,
   class: "Dragon",
   hp: 1050,
   atk: 1800,
@@ -2317,7 +2317,7 @@ export const Monsters = [
 {
   "": 89,
   monsterName: "Kaiser Dragon",
-  portrait: `/src/assets/Monster Portraits/Kaiser Dragon.png`,
+  portrait: `/MonsterPortraits/Kaiser Dragon.png`,
   class: "Dragon",
   hp: 1300,
   atk: 2300,
@@ -2343,7 +2343,7 @@ export const Monsters = [
 {
   "": 90,
   monsterName: "Kanan the Swordmistress",
-  portrait: `/src/assets/Monster Portraits/Kanan the Swordmistress.png`,
+  portrait: `/MonsterPortraits/Kanan the Swordmistress.png`,
   class: "Warrior",
   hp: 1000,
   atk: 1400,
@@ -2369,7 +2369,7 @@ export const Monsters = [
 {
   "": 91,
   monsterName: "Kanikabuto",
-  portrait: `/src/assets/Monster Portraits/Kanikabuto.png`,
+  portrait: `/MonsterPortraits/Kanikabuto.png`,
   class: "Beast",
   hp: 700,
   atk: 650,
@@ -2395,7 +2395,7 @@ export const Monsters = [
 {
   "": 92,
   monsterName: "Kazejin",
-  portrait: `/src/assets/Monster Portraits/Kazejin.png`,
+  portrait: `/MonsterPortraits/Kazejin.png`,
   class: "Spirit",
   hp: 1300,
   atk: 2400,
@@ -2421,7 +2421,7 @@ export const Monsters = [
 {
   "": 93,
   monsterName: "King of Yamimakai",
-  portrait: `/src/assets/Monster Portraits/King of Yamimakai.png`,
+  portrait: `/MonsterPortraits/King of Yamimakai.png`,
   class: "Fiend",
   hp: 1200,
   atk: 2000,
@@ -2447,7 +2447,7 @@ export const Monsters = [
 {
   "": 94,
   monsterName: "Kuriboh",
-  portrait: `/src/assets/Monster Portraits/Kuriboh.png`,
+  portrait: `/MonsterPortraits/Kuriboh.png`,
   class: "Fiend",
   hp: 480,
   atk: 300,
@@ -2473,7 +2473,7 @@ export const Monsters = [
 {
   "": 95,
   monsterName: "La Jinn the Mystical Genie of the Lamp",
-  portrait: `/src/assets/Monster Portraits/La Jinn the Mystical Genie of the Lamp.png`,
+  portrait: `/MonsterPortraits/La Jinn the Mystical Genie of the Lamp.png`,
   class: "Fiend",
   hp: 950,
   atk: 1800,
@@ -2499,7 +2499,7 @@ export const Monsters = [
 {
   "": 96,
   monsterName: "Labyrinth Tank",
-  portrait: `/src/assets/Monster Portraits/Labyrinth Tank.png`,
+  portrait: `/MonsterPortraits/Labyrinth Tank.png`,
   class: "Machine",
   hp: 1350,
   atk: 2400,
@@ -2525,7 +2525,7 @@ export const Monsters = [
 {
   "": 97,
   monsterName: "Larvae Moth",
-  portrait: `/src/assets/Monster Portraits/Larvae Moth.png`,
+  portrait: `/MonsterPortraits/Larvae Moth.png`,
   class: "Beast",
   hp: 500,
   atk: 500,
@@ -2551,7 +2551,7 @@ export const Monsters = [
 {
   "": 98,
   monsterName: "Launcher Spider",
-  portrait: `/src/assets/Monster Portraits/Launcher Spider.png`,
+  portrait: `/MonsterPortraits/Launcher Spider.png`,
   class: "Machine",
   hp: 1400,
   atk: 2200,
@@ -2577,7 +2577,7 @@ export const Monsters = [
 {
   "": 99,
   monsterName: "Lava Battleguard",
-  portrait: `/src/assets/Monster Portraits/Lava Battleguard.png`,
+  portrait: `/MonsterPortraits/Lava Battleguard.png`,
   class: "Warrior",
   hp: 1050,
   atk: 1550,
@@ -2603,7 +2603,7 @@ export const Monsters = [
 {
   "": 100,
   monsterName: "Lord of D.",
-  portrait: `/src/assets/Monster Portraits/Lord of D.png`,
+  portrait: `/MonsterPortraits/Lord of D.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1200,
@@ -2629,7 +2629,7 @@ export const Monsters = [
 {
   "": 101,
   monsterName: "Machine King",
-  portrait: `/src/assets/Monster Portraits/Machine King.png`,
+  portrait: `/MonsterPortraits/Machine King.png`,
   class: "Machine",
   hp: 1300,
   atk: 2200,
@@ -2655,7 +2655,7 @@ export const Monsters = [
 {
   "": 102,
   monsterName: "Magician of Black Chaos",
-  portrait: `/src/assets/Monster Portraits/Magician of Black Chaos.png`,
+  portrait: `/MonsterPortraits/Magician of Black Chaos.png`,
   class: "Spellcaster",
   hp: 1800,
   atk: 2800,
@@ -2681,7 +2681,7 @@ export const Monsters = [
 {
   "": 103,
   monsterName: "Magician of Faith",
-  portrait: `/src/assets/Monster Portraits/Magician of Faith.png`,
+  portrait: `/MonsterPortraits/Magician of Faith.png`,
   class: "Spellcaster",
   hp: 420,
   atk: 300,
@@ -2707,7 +2707,7 @@ export const Monsters = [
 {
   "": 104,
   monsterName: "Man-Eater Bug",
-  portrait: `/src/assets/Monster Portraits/Man-Eater Bug.png`,
+  portrait: `/MonsterPortraits/Man-Eater Bug.png`,
   class: "Beast",
   hp: 480,
   atk: 450,
@@ -2733,7 +2733,7 @@ export const Monsters = [
 {
   "": 105,
   monsterName: "Mavelus",
-  portrait: `/src/assets/Monster Portraits/Mavelus.png`,
+  portrait: `/MonsterPortraits/Mavelus.png`,
   class: "Beast",
   hp: 700,
   atk: 1300,
@@ -2759,7 +2759,7 @@ export const Monsters = [
 {
   "": 106,
   monsterName: "Megazowler",
-  portrait: `/src/assets/Monster Portraits/Megazowler.png`,
+  portrait: `/MonsterPortraits/Megazowler.png`,
   class: "Dragon",
   hp: 1300,
   atk: 1800,
@@ -2785,7 +2785,7 @@ export const Monsters = [
 {
   "": 107,
   monsterName: "Metalzoa",
-  portrait: `/src/assets/Monster Portraits/Metalzoa.png`,
+  portrait: `/MonsterPortraits/Metalzoa.png`,
   class: "Machine",
   hp: 1900,
   atk: 3000,
@@ -2811,7 +2811,7 @@ export const Monsters = [
 {
   "": 108,
   monsterName: "Meteor Black Dragon",
-  portrait: `/src/assets/Monster Portraits/Meteor Black Dragon.png`,
+  portrait: `/MonsterPortraits/Meteor Black Dragon.png`,
   class: "Dragon",
   hp: 2000,
   atk: 3500,
@@ -2837,7 +2837,7 @@ export const Monsters = [
 {
   "": 109,
   monsterName: "Meteor Dragon",
-  portrait: `/src/assets/Monster Portraits/Meteor Dragon.png`,
+  portrait: `/MonsterPortraits/Meteor Dragon.png`,
   class: "Dragon",
   hp: 1000,
   atk: 1800,
@@ -2863,7 +2863,7 @@ export const Monsters = [
 {
   "": 110,
   monsterName: "Midnight Fiend",
-  portrait: `/src/assets/Monster Portraits/Midnight Fiend.png`,
+  portrait: `/MonsterPortraits/Midnight Fiend.png`,
   class: "Fiend",
   hp: 500,
   atk: 800,
@@ -2889,7 +2889,7 @@ export const Monsters = [
 {
   "": 111,
   monsterName: "Millennium Golem",
-  portrait: `/src/assets/Monster Portraits/Millennium Golem.png`,
+  portrait: `/MonsterPortraits/Millennium Golem.png`,
   class: "Spirit",
   hp: 1300,
   atk: 2000,
@@ -2915,7 +2915,7 @@ export const Monsters = [
 {
   "": 112,
   monsterName: "Moisture Creature",
-  portrait: `/src/assets/Monster Portraits/Moisture Creature.png`,
+  portrait: `/MonsterPortraits/Moisture Creature.png`,
   class: "Spirit",
   hp: 2100,
   atk: 2800,
@@ -2941,7 +2941,7 @@ export const Monsters = [
 {
   "": 113,
   monsterName: "Monster Tamer",
-  portrait: `/src/assets/Monster Portraits/Monster Tamer.png`,
+  portrait: `/MonsterPortraits/Monster Tamer.png`,
   class: "Warrior",
   hp: 980,
   atk: 1800,
@@ -2967,7 +2967,7 @@ export const Monsters = [
 {
   "": 114,
   monsterName: "Mystic Horseman",
-  portrait: `/src/assets/Monster Portraits/Mystic Horseman.png`,
+  portrait: `/MonsterPortraits/Mystic Horseman.png`,
   class: "Warrior",
   hp: 950,
   atk: 1300,
@@ -2993,7 +2993,7 @@ export const Monsters = [
 {
   "": 115,
   monsterName: "Mystical Beast Serket",
-  portrait: `/src/assets/Monster Portraits/Mystical Beast Serket.png`,
+  portrait: `/MonsterPortraits/Mystical Beast Serket.png`,
   class: "Spirit",
   hp: 1300,
   atk: 2500,
@@ -3019,7 +3019,7 @@ export const Monsters = [
 {
   "": 116,
   monsterName: "Mystical Elf",
-  portrait: `/src/assets/Monster Portraits/Mystical Elf.png`,
+  portrait: `/MonsterPortraits/Mystical Elf.png`,
   class: "Spellcaster",
   hp: 1100,
   atk: 800,
@@ -3045,7 +3045,7 @@ export const Monsters = [
 {
   "": 117,
   monsterName: "Neck Hunter",
-  portrait: `/src/assets/Monster Portraits/Neck Hunter.png`,
+  portrait: `/MonsterPortraits/Neck Hunter.png`,
   class: "Fiend",
   hp: 1000,
   atk: 1750,
@@ -3071,7 +3071,7 @@ export const Monsters = [
 {
   "": 118,
   monsterName: "Number 39: Utopia",
-  portrait: `/src/assets/Monster Portraits/Number 39: Utopia.png`,
+  portrait: `/MonsterPortraits/Number 39: Utopia.png`,
   class: "Warrior",
   hp: 1100,
   atk: 2500,
@@ -3097,7 +3097,7 @@ export const Monsters = [
 {
   "": 119,
   monsterName: "Obelisk the Tormentor",
-  portrait: `/src/assets/Monster Portraits/Obelisk the Tormentor.png`,
+  portrait: `/MonsterPortraits/Obelisk the Tormentor.png`,
   class: "God",
   hp: 8500,
   atk: 7500,
@@ -3123,7 +3123,7 @@ export const Monsters = [
 {
   "": 120,
   monsterName: "Octoberser",
-  portrait: `/src/assets/Monster Portraits/Octoberser.png`,
+  portrait: `/MonsterPortraits/Octoberser.png`,
   class: "Beast",
   hp: 900,
   atk: 1600,
@@ -3149,7 +3149,7 @@ export const Monsters = [
 {
   "": 121,
   monsterName: "Orion the Battle King",
-  portrait: `/src/assets/Monster Portraits/Orion the Battle King.png`,
+  portrait: `/MonsterPortraits/Orion the Battle King.png`,
   class: "Spirit",
   hp: 990,
   atk: 1800,
@@ -3175,7 +3175,7 @@ export const Monsters = [
 {
   "": 122,
   monsterName: "Panther Warrior",
-  portrait: `/src/assets/Monster Portraits/Panther Warrior.png`,
+  portrait: `/MonsterPortraits/Panther Warrior.png`,
   class: "Warrior",
   hp: 1100,
   atk: 2000,
@@ -3201,7 +3201,7 @@ export const Monsters = [
 {
   "": 123,
   monsterName: "Parrot Dragon",
-  portrait: `/src/assets/Monster Portraits/Parrot Dragon.png`,
+  portrait: `/MonsterPortraits/Parrot Dragon.png`,
   class: "Dragon",
   hp: 1100,
   atk: 2000,
@@ -3227,7 +3227,7 @@ export const Monsters = [
 {
   "": 124,
   monsterName: "Penguin Soldier",
-  portrait: `/src/assets/Monster Portraits/Penguin Soldier.png`,
+  portrait: `/MonsterPortraits/Penguin Soldier.png`,
   class: "Warrior",
   hp: 590,
   atk: 750,
@@ -3253,7 +3253,7 @@ export const Monsters = [
 {
   "": 125,
   monsterName: "Perfectly Ultimate Great Moth",
-  portrait: `/src/assets/Monster Portraits/Perfectly Ultimate Great Moth.png`,
+  portrait: `/MonsterPortraits/Perfectly Ultimate Great Moth.png`,
   class: "Beast",
   hp: 2100,
   atk: 3500,
@@ -3279,7 +3279,7 @@ export const Monsters = [
 {
   "": 126,
   monsterName: "Phantom Dewan",
-  portrait: `/src/assets/Monster Portraits/Phantom Dewan.png`,
+  portrait: `/MonsterPortraits/Phantom Dewan.png`,
   class: "Fiend",
   hp: 530,
   atk: 700,
@@ -3305,7 +3305,7 @@ export const Monsters = [
 {
   "": 127,
   monsterName: "Pumpking the King of Ghosts",
-  portrait: `/src/assets/Monster Portraits/Pumpking the King of Ghosts.png`,
+  portrait: `/MonsterPortraits/Pumpking the King of Ghosts.png`,
   class: "Fiend",
   hp: 1200,
   atk: 1800,
@@ -3331,7 +3331,7 @@ export const Monsters = [
 {
   "": 128,
   monsterName: "Queen of Autumn Leaves",
-  portrait: `/src/assets/Monster Portraits/Queen of Autumn Leaves.png`,
+  portrait: `/MonsterPortraits/Queen of Autumn Leaves.png`,
   class: "Spirit",
   hp: 1000,
   atk: 1800,
@@ -3357,7 +3357,7 @@ export const Monsters = [
 {
   "": 129,
   monsterName: "Rabid Horseman",
-  portrait: `/src/assets/Monster Portraits/Rabid Horseman.png`,
+  portrait: `/MonsterPortraits/Rabid Horseman.png`,
   class: "Warrior",
   hp: 1300,
   atk: 2000,
@@ -3383,7 +3383,7 @@ export const Monsters = [
 {
   "": 130,
   monsterName: "Reaper of the Cards",
-  portrait: `/src/assets/Monster Portraits/Reaper of the Cards.png`,
+  portrait: `/MonsterPortraits/Reaper of the Cards.png`,
   class: "Fiend",
   hp: 950,
   atk: 1380,
@@ -3409,7 +3409,7 @@ export const Monsters = [
 {
   "": 131,
   monsterName: "Red-Eyes Black Dragon",
-  portrait: `/src/assets/Monster Portraits/Red-Eyes Black Dragon.png`,
+  portrait: `/MonsterPortraits/Red-Eyes Black Dragon.png`,
   class: "Dragon",
   hp: 1400,
   atk: 2400,
@@ -3435,7 +3435,7 @@ export const Monsters = [
 {
   "": 132,
   monsterName: "Red-Eyes Black Metal Dragon",
-  portrait: `/src/assets/Monster Portraits/Red-Eyes Black Metal Dragon.png`,
+  portrait: `/MonsterPortraits/Red-Eyes Black Metal Dragon.png`,
   class: "Machine",
   hp: 1800,
   atk: 2800,
@@ -3461,7 +3461,7 @@ export const Monsters = [
 {
   "": 133,
   monsterName: "Robotic Knight",
-  portrait: `/src/assets/Monster Portraits/Robotic Knight.png`,
+  portrait: `/MonsterPortraits/Robotic Knight.png`,
   class: "Machine",
   hp: 900,
   atk: 1600,
@@ -3487,7 +3487,7 @@ export const Monsters = [
 {
   "": 134,
   monsterName: "Rocket Warrior",
-  portrait: `/src/assets/Monster Portraits/Rocket Warrior.png`,
+  portrait: `/MonsterPortraits/Rocket Warrior.png`,
   class: "Machine",
   hp: 800,
   atk: 1500,
@@ -3513,7 +3513,7 @@ export const Monsters = [
 {
   "": 135,
   monsterName: "Rogue Doll",
-  portrait: `/src/assets/Monster Portraits/Rogue Doll.png`,
+  portrait: `/MonsterPortraits/Rogue Doll.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1600,
@@ -3539,7 +3539,7 @@ export const Monsters = [
 {
   "": 136,
   monsterName: "Ryu-Kishin Powered",
-  portrait: `/src/assets/Monster Portraits/Ryu-Kishin Powered.png`,
+  portrait: `/MonsterPortraits/Ryu-Kishin Powered.png`,
   class: "Fiend",
   hp: 900,
   atk: 1600,
@@ -3565,7 +3565,7 @@ export const Monsters = [
 {
   "": 137,
   monsterName: "Ryu-Ran",
-  portrait: `/src/assets/Monster Portraits/Ryu-Ran.png`,
+  portrait: `/MonsterPortraits/Ryu-Ran.png`,
   class: "Dragon",
   hp: 1400,
   atk: 2200,
@@ -3591,7 +3591,7 @@ export const Monsters = [
 {
   "": 138,
   monsterName: "Saggi the Dark Clown",
-  portrait: `/src/assets/Monster Portraits/Saggi the Dark Clown.png`,
+  portrait: `/MonsterPortraits/Saggi the Dark Clown.png`,
   class: "Spellcaster",
   hp: 700,
   atk: 600,
@@ -3617,7 +3617,7 @@ export const Monsters = [
 {
   "": 139,
   monsterName: "Sanga of the Thunder",
-  portrait: `/src/assets/Monster Portraits/Sanga the Thunder.png`,
+  portrait: `/MonsterPortraits/Sanga the Thunder.png`,
   class: "Spirit",
   hp: 1400,
   atk: 2600,
@@ -3643,7 +3643,7 @@ export const Monsters = [
 {
   "": 140,
   monsterName: "Sea King Dragon",
-  portrait: `/src/assets/Monster Portraits/Sea King Dragon.png`,
+  portrait: `/MonsterPortraits/Sea King Dragon.png`,
   class: "Dragon",
   hp: 1200,
   atk: 2000,
@@ -3669,7 +3669,7 @@ export const Monsters = [
 {
   "": 141,
   monsterName: "Seiyaryu",
-  portrait: `/src/assets/Monster Portraits/Seiyaryu.png`,
+  portrait: `/MonsterPortraits/Seiyaryu.png`,
   class: "Dragon",
   hp: 1350,
   atk: 2500,
@@ -3695,7 +3695,7 @@ export const Monsters = [
 {
   "": 142,
   monsterName: "Sengenjin",
-  portrait: `/src/assets/Monster Portraits/Sengenjin.png`,
+  portrait: `/MonsterPortraits/Sengenjin.png`,
   class: "Warrior",
   hp: 1700,
   atk: 2750,
@@ -3721,7 +3721,7 @@ export const Monsters = [
 {
   "": 143,
   monsterName: "Serpent Night Dragon",
-  portrait: `/src/assets/Monster Portraits/Serpent Night Dragon.png`,
+  portrait: `/MonsterPortraits/Serpent Night Dragon.png`,
   class: "Dragon",
   hp: 1300,
   atk: 2350,
@@ -3747,7 +3747,7 @@ export const Monsters = [
 {
   "": 144,
   monsterName: "Serpentine Princess",
-  portrait: `/src/assets/Monster Portraits/Serpentine Princess.png`,
+  portrait: `/MonsterPortraits/Serpentine Princess.png`,
   class: "Beast",
   hp: 1150,
   atk: 1400,
@@ -3773,7 +3773,7 @@ export const Monsters = [
 {
   "": 145,
   monsterName: "Shadow Ghoul",
-  portrait: `/src/assets/Monster Portraits/Shadow Ghoul.png`,
+  portrait: `/MonsterPortraits/Shadow Ghoul.png`,
   class: "Fiend",
   hp: 700,
   atk: 1600,
@@ -3799,7 +3799,7 @@ export const Monsters = [
 {
   "": 146,
   monsterName: "Shadow Specter",
-  portrait: `/src/assets/Monster Portraits/Shadow Specter.png`,
+  portrait: `/MonsterPortraits/Shadow Specter.png`,
   class: "Fiend",
   hp: 430,
   atk: 500,
@@ -3825,7 +3825,7 @@ export const Monsters = [
 {
   "": 147,
   monsterName: "Silver Fang",
-  portrait: `/src/assets/Monster Portraits/Silver Fang.png`,
+  portrait: `/MonsterPortraits/Silver Fang.png`,
   class: "Beast",
   hp: 750,
   atk: 1200,
@@ -3851,7 +3851,7 @@ export const Monsters = [
 {
   "": 148,
   monsterName: "Skelgon",
-  portrait: `/src/assets/Monster Portraits/Skelgon.png`,
+  portrait: `/MonsterPortraits/Skelgon.png`,
   class: "Fiend",
   hp: 1200,
   atk: 1700,
@@ -3877,7 +3877,7 @@ export const Monsters = [
 {
   "": 149,
   monsterName: "Skull Knight",
-  portrait: `/src/assets/Monster Portraits/Skull Knight.png`,
+  portrait: `/MonsterPortraits/Skull Knight.png`,
   class: "Spellcaster",
   hp: 1500,
   atk: 2650,
@@ -3903,7 +3903,7 @@ export const Monsters = [
 {
   "": 150,
   monsterName: "Slifer the Sky Dragon",
-  portrait: `/src/assets/Monster Portraits/Slifer the Sky Dragon.png`,
+  portrait: `/MonsterPortraits/Slifer the Sky Dragon.png`,
   class: "God",
   hp: 8200,
   atk: 7200,
@@ -3929,7 +3929,7 @@ export const Monsters = [
 {
   "": 151,
   monsterName: "Slot Machine",
-  portrait: `/src/assets/Monster Portraits/Slot Machine.png`,
+  portrait: `/MonsterPortraits/Slot Machine.png`,
   class: "Machine",
   hp: 1200,
   atk: 2000,
@@ -3955,7 +3955,7 @@ export const Monsters = [
 {
   "": 152,
   monsterName: "Stardust Dragon",
-  portrait: `/src/assets/Monster Portraits/Stardust Dragon.png`,
+  portrait: `/MonsterPortraits/Stardust Dragon.png`,
   class: "Dragon",
   hp: 1300,
   atk: 2500,
@@ -3981,7 +3981,7 @@ export const Monsters = [
 {
   "": 153,
   monsterName: "Suijin",
-  portrait: `/src/assets/Monster Portraits/Suijin.png`,
+  portrait: `/MonsterPortraits/Suijin.png`,
   class: "Spirit",
   hp: 1350,
   atk: 2500,
@@ -4007,7 +4007,7 @@ export const Monsters = [
 {
   "": 154,
   monsterName: "Summoned Skull",
-  portrait: `/src/assets/Monster Portraits/Summoned Skull.png`,
+  portrait: `/MonsterPortraits/Summoned Skull.png`,
   class: "Fiend",
   hp: 1450,
   atk: 2500,
@@ -4033,7 +4033,7 @@ export const Monsters = [
 {
   "": 155,
   monsterName: "Swamp Battleguard",
-  portrait: `/src/assets/Monster Portraits/Swamp Battleguard.png`,
+  portrait: `/MonsterPortraits/Swamp Battleguard.png`,
   class: "Warrior",
   hp: 1050,
   atk: 1800,
@@ -4059,7 +4059,7 @@ export const Monsters = [
 {
   "": 156,
   monsterName: "Swordsman from a Foreign Land",
-  portrait: `/src/assets/Monster Portraits/Swordsman from a Foreign Land.png`,
+  portrait: `/MonsterPortraits/Swordsman from a Foreign Land.png`,
   class: "Warrior",
   hp: 490,
   atk: 250,
@@ -4085,7 +4085,7 @@ export const Monsters = [
 {
   "": 157,
   monsterName: "Swordstalker",
-  portrait: `/src/assets/Monster Portraits/Swordstalker.png`,
+  portrait: `/MonsterPortraits/Swordstalker.png`,
   class: "Warrior",
   hp: 1050,
   atk: 2000,
@@ -4111,7 +4111,7 @@ export const Monsters = [
 {
   "": 158,
   monsterName: "Tao the Chanter",
-  portrait: `/src/assets/Monster Portraits/Tao the Chanter.png`,
+  portrait: `/MonsterPortraits/Tao the Chanter.png`,
   class: "Spellcaster",
   hp: 700,
   atk: 1200,
@@ -4137,7 +4137,7 @@ export const Monsters = [
 {
   "": 159,
   monsterName: "The Illusory Gentleman",
-  portrait: `/src/assets/Monster Portraits/The Illusory Gentleman.png`,
+  portrait: `/MonsterPortraits/The Illusory Gentleman.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1500,
@@ -4163,7 +4163,7 @@ export const Monsters = [
 {
   "": 160,
   monsterName: "The Snake Hair",
-  portrait: `/src/assets/Monster Portraits/The Snake Hair.png`,
+  portrait: `/MonsterPortraits/The Snake Hair.png`,
   class: "Fiend",
   hp: 800,
   atk: 1500,
@@ -4189,7 +4189,7 @@ export const Monsters = [
 {
   "": 161,
   monsterName: "The Winged Dragon of Ra",
-  portrait: `/src/assets/Monster Portraits/The Winged Dragon of Ra.png`,
+  portrait: `/MonsterPortraits/The Winged Dragon of Ra.png`,
   class: "God",
   hp: 8500,
   atk: 8500,
@@ -4215,7 +4215,7 @@ export const Monsters = [
 {
   "": 162,
   monsterName: "Thousand Dragon",
-  portrait: `/src/assets/Monster Portraits/Thousand Dragon.png`,
+  portrait: `/MonsterPortraits/Thousand Dragon.png`,
   class: "Dragon",
   hp: 1600,
   atk: 2400,
@@ -4241,7 +4241,7 @@ export const Monsters = [
 {
   "": 163,
   monsterName: "Thunder Dragon",
-  portrait: `/src/assets/Monster Portraits/Thunder Dragon.png`,
+  portrait: `/MonsterPortraits/Thunder Dragon.png`,
   class: "Dragon",
   hp: 800,
   atk: 1600,
@@ -4267,7 +4267,7 @@ export const Monsters = [
 {
   "": 164,
   monsterName: "Time Wizard",
-  portrait: `/src/assets/Monster Portraits/Time Wizard.png`,
+  portrait: `/MonsterPortraits/Time Wizard.png`,
   class: "Spellcaster",
   hp: 400,
   atk: 500,
@@ -4293,7 +4293,7 @@ export const Monsters = [
 {
   "": 165,
   monsterName: "Twin-Headed Thunder Dragon",
-  portrait: `/src/assets/Monster Portraits/Twin-Headed Thunder Dragon.png`,
+  portrait: `/MonsterPortraits/Twin-Headed Thunder Dragon.png`,
   class: "Dragon",
   hp: 1800,
   atk: 2800,
@@ -4319,7 +4319,7 @@ export const Monsters = [
 {
   "": 166,
   monsterName: "Two-Headed King Rex",
-  portrait: `/src/assets/Monster Portraits/Two-Headed King Rex.png`,
+  portrait: `/MonsterPortraits/Two-Headed King Rex.png`,
   class: "Dragon",
   hp: 1100,
   atk: 1600,
@@ -4345,7 +4345,7 @@ export const Monsters = [
 {
   "": 167,
   monsterName: "Uraby",
-  portrait: `/src/assets/Monster Portraits/Uraby.png`,
+  portrait: `/MonsterPortraits/Uraby.png`,
   class: "Dragon",
   hp: 880,
   atk: 1500,
@@ -4371,7 +4371,7 @@ export const Monsters = [
 {
   "": 168,
   monsterName: "Valkyrion the Magna Warrior",
-  portrait: `/src/assets/Monster Portraits/Valkyrion the Magna Warrior.png`,
+  portrait: `/MonsterPortraits/Valkyrion the Magna Warrior.png`,
   class: "Machine",
   hp: 2000,
   atk: 3500,
@@ -4397,7 +4397,7 @@ export const Monsters = [
 {
   "": 169,
   monsterName: "Water Girl",
-  portrait: `/src/assets/Monster Portraits/Water Girl.png`,
+  portrait: `/MonsterPortraits/Water Girl.png`,
   class: "Spellcaster",
   hp: 700,
   atk: 1250,
@@ -4423,7 +4423,7 @@ export const Monsters = [
 {
   "": 170,
   monsterName: "Wing Eagle",
-  portrait: `/src/assets/Monster Portraits/Wing Eagle.png`,
+  portrait: `/MonsterPortraits/Wing Eagle.png`,
   class: "Beast",
   hp: 900,
   atk: 1800,
@@ -4449,7 +4449,7 @@ export const Monsters = [
 {
   "": 171,
   monsterName: "Winged Dragon, Guardian of the Fortress #1",
-  portrait: `/src/assets/Monster Portraits/Winged Dragon, Guardian of the Fortress #1.png`,
+  portrait: `/MonsterPortraits/Winged Dragon, Guardian of the Fortress #1.png`,
   class: "Dragon",
   hp: 750,
   atk: 1400,
@@ -4475,7 +4475,7 @@ export const Monsters = [
 {
   "": 172,
   monsterName: "Zanki",
-  portrait: `/src/assets/Monster Portraits/Zanki.png`,
+  portrait: `/MonsterPortraits/Zanki.png`,
   class: "Warrior",
   hp: 900,
   atk: 1500,
@@ -4501,7 +4501,7 @@ export const Monsters = [
 {
   "": 173,
   monsterName: "Zarigun",
-  portrait: `/src/assets/Monster Portraits/Zarigun.png`,
+  portrait: `/MonsterPortraits/Zarigun.png`,
   class: "Beast",
   hp: 680,
   atk: 600,
@@ -4527,7 +4527,7 @@ export const Monsters = [
 {
   "": 174,
   monsterName: "Zera the Mant",
-  portrait: `/src/assets/Monster Portraits/Zera the Mant.png`,
+  portrait: `/MonsterPortraits/Zera the Mant.png`,
   class: "Fiend",
   hp: 1700,
   atk: 2800,
@@ -4553,7 +4553,7 @@ export const Monsters = [
 {
   "": 175,
   monsterName: "Zoa",
-  portrait: `/src/assets/Monster Portraits/Zoa.png`,
+  portrait: `/MonsterPortraits/Zoa.png`,
   class: "Fiend",
   hp: 1150,
   atk: 2600,
@@ -4579,7 +4579,7 @@ export const Monsters = [
 {
   "": 176,
   monsterName: "Zombie Warrior",
-  portrait: `/src/assets/Monster Portraits/Zombie Warrior.png`,
+  portrait: `/MonsterPortraits/Zombie Warrior.png`,
   class: "Fiend",
   hp: 700,
   atk: 1200,
