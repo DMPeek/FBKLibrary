@@ -106,7 +106,7 @@ function MonsterCard({ monster, level, onLevelChange, statCompare }) {
 
 
 //building individual monster graphs for stat scaling per level
-function StatGraph({ monster, idx }) {
+function StatGraph({ monster }) {
   const chartRef = useRef(null);
 
   //builds and renders individual stat graph in canvas element when monster is selected
@@ -252,6 +252,7 @@ export default function Compare() {
         </div>
         <nav className="header-right">
           <a href="/">Calculator</a>
+          <a href="/Orbs">Orbs</a>
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>

@@ -1,5 +1,6 @@
 //hardcoded database of monsters for frontend calculations
-export const Monsters = [{
+export const Monsters = [
+{
   "": 0,
   monsterName: "Alpha The Magnet Warrior",
   portrait: `/src/assets/Monster Portraits/Alpha The Magnet Warrior.png`,
@@ -2602,7 +2603,7 @@ export const Monsters = [{
 {
   "": 100,
   monsterName: "Lord of D.",
-  portrait: `/src/assets/Monster Portraits/Lord of D..png`,
+  portrait: `/src/assets/Monster Portraits/Lord of D.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1200,
@@ -3616,7 +3617,7 @@ export const Monsters = [{
 {
   "": 139,
   monsterName: "Sanga of the Thunder",
-  portrait: `/src/assets/Monster Portraits/Sanga of the Thunder.png`,
+  portrait: `/src/assets/Monster Portraits/Sanga the Thunder.png`,
   class: "Spirit",
   hp: 1400,
   atk: 2600,
