@@ -4448,7 +4448,7 @@ export const Monsters = [
 },
 {
   "": 171,
-  monsterName: "Winged Dragon, Guardian of the Fortress #1",
+  monsterName: "Winged Dragon, Guardian of the Fortress 1",
   portrait: `/MonsterPortraits/Winged Dragon, Guardian of the Fortress 1.png`,
   class: "Dragon",
   hp: 750,
