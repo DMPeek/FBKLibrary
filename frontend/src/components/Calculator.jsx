@@ -257,6 +257,7 @@ export default function Compare() {
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
+        <h2 style={{marginBottom: '24px'}}>Select one mon to use the level up calculator or select two for comparisons. (Scroll down to see some graphs after selections)</h2>
         <div className="cards-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '0px' }}>
           <div className="card-holder">
             <div className="monster-search">

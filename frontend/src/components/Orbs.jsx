@@ -114,6 +114,7 @@ export default function Orbs() {
                 </nav>
             </header>
             <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
+                <h2 style={{marginBottom: '24px'}}>Looks up RGB values of orbs to return top 15 mons with the closest orb colors to your selection</h2>
                 <div className="orb-holder">
                     <div className='orb-search-bar'>
                         <div className="monster-search">
