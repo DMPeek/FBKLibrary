@@ -2603,7 +2603,7 @@ export const Monsters = [
 {
   "": 100,
   monsterName: "Lord of D.",
-  portrait: `/src/assets/Monster Portraits/Lord of D..png`,
+  portrait: `/src/assets/Monster Portraits/Lord of D.png`,
   class: "Spellcaster",
   hp: 850,
   atk: 1200,

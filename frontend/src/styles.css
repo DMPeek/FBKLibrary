@@ -38,6 +38,10 @@ html, body {
     justify-content: space-between;
 }
 
+.total-value {
+    border: 1px solid #ffb300;
+}
+
 .r-value {
     border: 1px solid #FF0000;
 }
