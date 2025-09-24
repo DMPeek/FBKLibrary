@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import '../styles.css';
 import { Monsters } from '../assets/monsters';
+import { Marshalls } from '../assets/marshalls';
 
 //converts hex to numerical RGB values
 function hexToRGB(hex_code) {

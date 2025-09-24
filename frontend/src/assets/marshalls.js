@@ -1,6 +1,6 @@
 //hardcoded database of marshalls for frontend calculations
 //MARHSALLS NEED PORTRAITS
-export const Marshall = [
+export const Marshalls = [
 {
     "": 0,
     marshallName: "Yugi",
