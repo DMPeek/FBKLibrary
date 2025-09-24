@@ -109,6 +109,7 @@ export default function Orbs() {
                 <nav className="header-right">
                     <a href="/">Calculator</a>
                     <a href="/Orbs">Orbs</a>
+                    <a href="/TeamBuilder">Team Builder</a>
                 </nav>
             </header>
             <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
