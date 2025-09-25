@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import '../styles.css';
 import { Monsters } from '../assets/monsters';
 import { calc, hpCalc, atkDefCalc, apCalc } from '../utils/lvl_calc';
@@ -115,10 +115,29 @@ function StatGraph({ monster }) {
   //ctx gets the current context of the canvas element, which you need to render the chart
   //chart variable makes a new Chart.js with the ctx variable's context. Chart is stored in chart variable.
   
+  const wrapLabel = (str, maxLen = 20) => {
+    if (str.length <= maxLen) return [str]; // short enough, just return the string
+    const words = str.split(" ");
+    let lines = [];
+    let current = "";
+
+    words.forEach(word => {
+      if ((current + word).length > maxLen) {
+        lines.push(current.trim());
+        current = word + " ";
+      } else {
+        current += word + " ";
+      }
+    });
+    if (current) lines.push(current.trim());
+    return lines;
+  };
+
   useEffect(() => {
     if (!monster) return;
     const { hpArr, atkArr, defArr } = getStatGrowthArrays(monster);
     const ctx = chartRef.current.getContext('2d');
+    const yAxisLabel = wrapLabel(`Stat Value (${monster.monsterName || ""})`, 25);
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
@@ -147,7 +166,7 @@ function StatGraph({ monster }) {
             ticks: { color: '#fff', font: { size: 14, weight: 'bold' } }
           },
           y: {
-            title: { display: true, text: `Stat Value (${monster.monsterName})`, color: '#fff', font: { size: 16, weight: 'bold' } },
+            title: { display: true, text: yAxisLabel, color: '#fff', font: { size: 16, weight: 'bold' } },
             ticks: { color: '#fff', font: { size: 14, weight: 'bold' } }
           }
         }
