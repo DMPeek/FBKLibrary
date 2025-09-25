@@ -356,9 +356,8 @@ export default function Compare() {
           </div>
         </div>
         {/* Comparison graphs section, always below individual graphs */}
-        <div style={{ width: '100%', marginTop: '48px', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start' }}>
-          <div style={{ flex: 1 }}></div>
-          <div className="comparison-graphs-grid" style={{ width: '900px', marginRight: '180px' }}>
+        <div style={{ width: '100%', marginTop: '48px', display: 'flex', flexDirection: 'row', justifyItems: 'center', alignItems: 'flex-start' }}>
+          <div className="comparison-graphs-grid" style={{ width: '100%', margin: '0 auto' }}>
             <ComparisonGraph monsters={selectedMonsters} stat="hp" id="hp-comparison-graph" />
             <ComparisonGraph monsters={selectedMonsters} stat="ap" id="ap-comparison-graph" />
             <ComparisonGraph monsters={selectedMonsters} stat="atk" id="atk-comparison-graph" />
