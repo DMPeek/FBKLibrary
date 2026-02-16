@@ -174,7 +174,7 @@ function atkDefCalc(GT, level) {
 function apCalc(GT, level) {
     const growth = Growths[GT];
     let sum = 0;
-    for (let i = 1; i < level; i++) {
+    for (let i = 0; i < level; i++) {
         if (growth.apLevels.includes(i)) {
             sum++;
         }
