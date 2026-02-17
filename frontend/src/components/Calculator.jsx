@@ -352,7 +352,7 @@ export default function Compare() {
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-        <h2 style={{marginBottom: '24px'}}>Select mons to look up. Can pick 1-3 for comparing and contrasting.</h2>
+        <h2 style={{marginBottom: '24px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting.</h2>
         <div className="cards-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '0px', flexWrap: 'wrap' }}>
           <div className="card-holder">
             <div className="monster-search">
