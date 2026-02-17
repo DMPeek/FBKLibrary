@@ -181,24 +181,40 @@ function StatGraph({ monster }) {
 
 
 
-//builds and renders 4 graphs for comparing stats between two selected monsters from levels 1-99
-//requires both monsters to be selected but follows same rules as graphs above
+//builds and renders 4 graphs for comparing stats between up to 3 selected monsters from levels 1-99
+//requires at least 2 monsters to be selected but follows same rules as graphs above
 function ComparisonGraph({ monsters, stat, id }) {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    if (!monsters[0] || !monsters[1]) return;
-    const leftStats = getStatGrowthArrays(monsters[0]);
-    const rightStats = getStatGrowthArrays(monsters[1]);
+    // Count how many monsters are selected
+    const selectedCount = [monsters[0], monsters[1], monsters[2]].filter(m => m !== null).length;
+    if (selectedCount < 2) return; // Need at least 2 monsters
+    
+    // Build datasets array based on which monsters are selected
+    const datasets = [];
+    const colors = ['#00eaff', '#ff6384', '#33ff33'];
+    const bgColors = ['rgba(0,234,255,0.1)', 'rgba(255,99,132,0.1)', 'rgba(51,255,51,0.1)'];
+    
+    for (let i = 0; i < 3; i++) {
+      if (monsters[i] !== null && monsters[i] !== undefined) {
+        const stats = getStatGrowthArrays(monsters[i]);
+        datasets.push({
+          label: monsters[i].monsterName,
+          data: stats[stat + 'Arr'],
+          borderColor: colors[i],
+          backgroundColor: bgColors[i],
+          tension: 0.2
+        });
+      }
+    }
+    
     const ctx = chartRef.current.getContext('2d');
     const chart = new Chart(ctx, {
       type: 'line',
       data: {
         labels: Array.from({ length: 99 }, (_, i) => i + 1),
-        datasets: [
-          { label: monsters[0].monsterName, data: leftStats[stat + 'Arr'], borderColor: '#00eaff', backgroundColor: 'rgba(0,234,255,0.1)', tension: 0.2 },
-          { label: monsters[1].monsterName, data: rightStats[stat + 'Arr'], borderColor: '#ff6384', backgroundColor: 'rgba(255,99,132,0.1)', tension: 0.2 }
-        ]
+        datasets: datasets
       },
       options: {
         plugins: {
@@ -235,29 +251,89 @@ export default function Compare() {
   // set up useState variables for component
   const [search1, setSearch1] = useState('');
   const [search2, setSearch2] = useState('');
-  const [selectedMonsters, setSelectedMonsters] = useState([null, null]);
-  const [levels, setLevels] = useState([null, null]);
-  const [isDropdownOpen, setIsDropdownOpen] = useState([false, false]);
+  const [search3, setSearch3] = useState('');
+  const [selectedMonsters, setSelectedMonsters] = useState([null, null, null]);
+  const [levels, setLevels] = useState([null, null, null]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState([false, false, false]);
+  const blurTimeoutsRef = useRef([null, null, null]); // Track pending blur timeouts for each search
   const filteredMonsters1 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search1.toLowerCase()));
   const filteredMonsters2 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search2.toLowerCase()));
+  const filteredMonsters3 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search3.toLowerCase()));
 
-  // Stat comparison logic
+  // Helper to handle focus: clear other timeouts and open the focused dropdown
+  const handleSearchFocus = (idx) => {
+    // Clear all pending blur timeouts
+    blurTimeoutsRef.current.forEach((timeout, i) => {
+      if (timeout) clearTimeout(timeout);
+    });
+    blurTimeoutsRef.current = [null, null, null];
+    
+    // Close all dropdowns except the one being focused
+    const newState = [false, false, false];
+    newState[idx] = true;
+    setIsDropdownOpen(newState);
+  };
+
+  // Helper to handle blur: delay closing so clicks on dropdown items register
+  const handleSearchBlur = (idx) => {
+    const timeoutId = setTimeout(() => {
+      setIsDropdownOpen(prev => {
+        const newState = [...prev];
+        newState[idx] = false;
+        return newState;
+      });
+    }, 120);
+    blurTimeoutsRef.current[idx] = timeoutId;
+  };
+
+  // Stat comparison logic for 3 monsters
   function getStatCompare(idx) {
-    //setting up comparison variables
-    const otherIdx = idx === 0 ? 1 : 0; // determines index of other monster (if idx===0, otherIdx===1 and vice versa)
-    const m1 = selectedMonsters[idx];
-    const m2 = selectedMonsters[otherIdx];
-    const l1 = levels[idx] ?? 1; // level defaults to 1 if not set
-    const l2 = levels[otherIdx] ?? 1;
-    if (!m1 || !m2) return null; // requires both monsters be selected to continue
-    const s1 = calc(m1, l1); // calculates monster stats at their assigned level
-    const s2 = calc(m2, l2);
-    return {
-      hp: s1[0] > s2[0] ? 'high' : s1[0] < s2[0] ? 'low' : 'equal',
-      ap: s1[3] > s2[3] ? 'high' : s1[3] < s2[3] ? 'low' : 'equal',
-      atk: s1[1] > s2[1] ? 'high' : s1[1] < s2[1] ? 'low' : 'equal',
-      def: s1[2] > s2[2] ? 'high' : s1[2] < s2[2] ? 'low' : 'equal',
-    }; // ^^^^ determines which stats are higher or lower to assign colors
+    const m0 = selectedMonsters[0];
+    const m1 = selectedMonsters[1];
+    const m2 = selectedMonsters[2];
+    const l0 = levels[0] ?? 1;
+    const l1 = levels[1] ?? 1;
+    const l2 = levels[2] ?? 1;
+    
+    // Require at least 2 monsters to compare; if less, return null
+    const monstersSelected = [m0, m1, m2].filter(m => m !== null).length;
+    if (monstersSelected < 2) return null;
+    
+    // Get stats for all 3 monsters (or null if not selected)
+    const s0 = m0 ? calc(m0, l0) : null;
+    const s1 = m1 ? calc(m1, l1) : null;
+    const s2 = m2 ? calc(m2, l2) : null;
+    
+    // Build list of stat values for the monster at idx
+    const statIndices = { hp: 0, ap: 3, atk: 1, def: 2 };
+    const result = {};
+    
+    for (const [statName, statIdx] of Object.entries(statIndices)) {
+      const values = [];
+      if (s0) values.push(s0[statIdx]);
+      if (s1) values.push(s1[statIdx]);
+      if (s2) values.push(s2[statIdx]);
+      
+      // Find max and min values among selected monsters for this stat
+      const maxValue = Math.max(...values);
+      const minValue = Math.min(...values);
+      
+      // Get the value for the current monster (idx)
+      const currentValue = idx === 0 ? s0?.[statIdx] : idx === 1 ? s1?.[statIdx] : s2?.[statIdx];
+      
+      // If all selected monsters have equal stats for this stat, return null (neutral color)
+      if (maxValue === minValue) {
+        result[statName] = null;
+      } else if (currentValue === maxValue) {
+        // If current monster's stat equals the max (and not all equal), mark as 'high' (green)
+        result[statName] = 'high';
+      } else {
+        // Otherwise mark as 'low' (red)
+        result[statName] = 'low';
+      }
+    }
+    
+    return result;
   }
 
 
@@ -276,8 +352,8 @@ export default function Compare() {
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-        <h2 style={{marginBottom: '24px'}}>Select one mon to use the level up calculator or select two for comparisons. (Scroll down to see some graphs after selections)</h2>
-        <div className="cards-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '0px' }}>
+        <h2 style={{marginBottom: '24px'}}>Select mons to look up. Can pick 1-3 for comparing and contrasting.</h2>
+        <div className="cards-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '0px', flexWrap: 'wrap' }}>
           <div className="card-holder">
             <div className="monster-search">
               <input
@@ -285,17 +361,17 @@ export default function Compare() {
                 value={search1}
                 onChange={e => {
                   setSearch1(e.target.value);
-                  setIsDropdownOpen([true, isDropdownOpen[1]]);
+                  setIsDropdownOpen([true, isDropdownOpen[1], isDropdownOpen[2]]);
                 }}
-                onFocus={() => setIsDropdownOpen([true, isDropdownOpen[1]])}
-                onBlur={() => setTimeout(() => setIsDropdownOpen([false, isDropdownOpen[1]]), 120)}
+                onFocus={() => handleSearchFocus(0)}
+                onBlur={() => handleSearchBlur(0)}
                 onKeyDown={e => {
                   if (e.key === "Enter") {
-                    setIsDropdownOpen([false, isDropdownOpen[1]]);
+                    setIsDropdownOpen([false, isDropdownOpen[1], isDropdownOpen[2]]);
                     const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
                     if (match) {
-                      setSelectedMonsters([match, selectedMonsters[1]]);
-                      setLevels([1, levels[1]]);
+                      setSelectedMonsters([match, selectedMonsters[1], selectedMonsters[2]]);
+                      setLevels([1, levels[1], levels[2]]);
                       setSearch1(match.monsterName);
                     }
                   }
@@ -306,10 +382,10 @@ export default function Compare() {
               <ul className={`monster-dropdown dropdown-list${isDropdownOpen[0] && filteredMonsters1.length > 0 ? ' show' : ''}`}> 
                 {filteredMonsters1.map(monster => {
                   return <li key={monster.monsterName} onMouseDown={() => {
-                    setSelectedMonsters([monster, selectedMonsters[1]]);
+                    setSelectedMonsters([monster, selectedMonsters[1], selectedMonsters[2]]);
                     setSearch1(monster.monsterName);
-                    setLevels([1, levels[1]]);
-                    setIsDropdownOpen([false, isDropdownOpen[1]]);
+                    setLevels([1, levels[1], levels[2]]);
+                    setIsDropdownOpen([false, isDropdownOpen[1], isDropdownOpen[2]]);
                   }}>{monster.monsterName}</li>;
                 })}
               </ul>
@@ -317,7 +393,7 @@ export default function Compare() {
             <MonsterCard
               monster={selectedMonsters[0]}
               level={levels[0]}
-              onLevelChange={lvl => setLevels([lvl, levels[1]])}
+              onLevelChange={lvl => setLevels([lvl, levels[1], levels[2]])}
               statCompare={getStatCompare(0)}
             />
           </div>
@@ -328,17 +404,17 @@ export default function Compare() {
                 value={search2}
                 onChange={e => {
                   setSearch2(e.target.value);
-                  setIsDropdownOpen([isDropdownOpen[0], true]);
+                  setIsDropdownOpen([isDropdownOpen[0], true, isDropdownOpen[2]]);
                 }}
-                onFocus={() => setIsDropdownOpen([isDropdownOpen[0], true])}
-                onBlur={() => setTimeout(() => setIsDropdownOpen([isDropdownOpen[0], false]), 120)}
+                onFocus={() => handleSearchFocus(1)}
+                onBlur={() => handleSearchBlur(1)}
                 onKeyDown={e => {
                   if (e.key === "Enter") {
-                    setIsDropdownOpen([isDropdownOpen[0], false]);
+                    setIsDropdownOpen([isDropdownOpen[0], false, isDropdownOpen[2]]);
                     const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
                     if (match) {
-                      setSelectedMonsters([selectedMonsters[0], match]);
-                      setLevels([levels[0], 1]);
+                      setSelectedMonsters([selectedMonsters[0], match, selectedMonsters[2]]);
+                      setLevels([levels[0], 1, levels[2]]);
                       setSearch2(match.monsterName);
                     }
                   }
@@ -349,10 +425,10 @@ export default function Compare() {
               <ul className={`monster-dropdown dropdown-list${isDropdownOpen[1] && filteredMonsters2.length > 0 ? ' show' : ''}`}> 
                 {filteredMonsters2.map(monster => {
                   return <li key={monster.monsterName} onMouseDown={() => {
-                    setSelectedMonsters([selectedMonsters[0], monster]);
+                    setSelectedMonsters([selectedMonsters[0], monster, selectedMonsters[2]]);
                     setSearch2(monster.monsterName);
-                    setLevels([levels[0], 1]);
-                    setIsDropdownOpen([isDropdownOpen[0], false]);
+                    setLevels([levels[0], 1, levels[2]]);
+                    setIsDropdownOpen([isDropdownOpen[0], false, isDropdownOpen[2]]);
                   }}>{monster.monsterName}</li>;
                 })}
               </ul>
@@ -360,18 +436,64 @@ export default function Compare() {
             <MonsterCard
               monster={selectedMonsters[1]}
               level={levels[1]}
-              onLevelChange={lvl => setLevels([levels[0], lvl])}
+              onLevelChange={lvl => setLevels([levels[0], lvl, levels[2]])}
               statCompare={getStatCompare(1)}
+            />
+          </div>
+          <div className="card-holder">
+            <div className="monster-search">
+              <input
+                type="text"
+                value={search3}
+                onChange={e => {
+                  setSearch3(e.target.value);
+                  setIsDropdownOpen([isDropdownOpen[0], isDropdownOpen[1], true]);
+                }}
+                onFocus={() => handleSearchFocus(2)}
+                onBlur={() => handleSearchBlur(2)}
+                onKeyDown={e => {
+                  if (e.key === "Enter") {
+                    setIsDropdownOpen([isDropdownOpen[0], isDropdownOpen[1], false]);
+                    const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
+                    if (match) {
+                      setSelectedMonsters([selectedMonsters[0], selectedMonsters[1], match]);
+                      setLevels([levels[0], levels[1], 1]);
+                      setSearch3(match.monsterName);
+                    }
+                  }
+                }}
+                placeholder="Search monster 3..."
+                autoComplete="off"
+              />
+              <ul className={`monster-dropdown dropdown-list${isDropdownOpen[2] && filteredMonsters3.length > 0 ? ' show' : ''}`}> 
+                {filteredMonsters3.map(monster => {
+                  return <li key={monster.monsterName} onMouseDown={() => {
+                    setSelectedMonsters([selectedMonsters[0], selectedMonsters[1], monster]);
+                    setSearch3(monster.monsterName);
+                    setLevels([levels[0], levels[1], 1]);
+                    setIsDropdownOpen([isDropdownOpen[0], isDropdownOpen[1], false]);
+                  }}>{monster.monsterName}</li>;
+                })}
+              </ul>
+            </div>
+            <MonsterCard
+              monster={selectedMonsters[2]}
+              level={levels[2]}
+              onLevelChange={lvl => setLevels([levels[0], levels[1], lvl])}
+              statCompare={getStatCompare(2)}
             />
           </div>
         </div>
         {/* Individual stat graphs row below cards */}
-        <div className="individual-graphs-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', margin: '32px 0 0 0' }}>
+        <div className="individual-graphs-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', margin: '32px 0 0 0', flexWrap: 'wrap' }}>
           <div style={{ width: '500px', display: 'flex', justifyContent: 'center' }}>
             <StatGraph monster={selectedMonsters[0]} idx={0} />
           </div>
           <div style={{ width: '500px', display: 'flex', justifyContent: 'center' }}>
             <StatGraph monster={selectedMonsters[1]} idx={1} />
+          </div>
+          <div style={{ width: '500px', display: 'flex', justifyContent: 'center' }}>
+            <StatGraph monster={selectedMonsters[2]} idx={2} />
           </div>
         </div>
         {/* Comparison graphs section, always below individual graphs */}
