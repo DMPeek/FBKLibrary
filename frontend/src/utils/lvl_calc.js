@@ -174,7 +174,9 @@ function atkDefCalc(GT, level) {
 function apCalc(GT, level) {
     const growth = Growths[GT];
     let sum = 0;
-    for (let i = 0; i < level; i++) {
+    // Count AP increases that occur at levels up to and including the target level.
+    // Loop from 1..level so that an AP listed at level 10 is counted when level===10.
+    for (let i = 1; i <= level; i++) {
         if (growth.apLevels.includes(i)) {
             sum++;
         }
@@ -182,9 +184,17 @@ function apCalc(GT, level) {
     return sum;
 }
 
-// below comment was used in testing
 // calculator inputs (Monster, Level)
-// result = calc(BEWD, 80);
-// console.log(`Hp: ${result[0]}, Atk: ${result[1]}, Def: ${result[2]}, AP: ${result[3]}`);
+// Passing a string to `calc` causes runtime errors because `calc` expects a monster
+// object with properties like hp/atk/def/ap/gt. Look up the monster object first.
+
+// const _testMonsterName = "Dark Paladin";
+// const _testMonster = Monsters.find(m => m.monsterName === _testMonsterName);
+// if (_testMonster) {
+//     const result = calc(_testMonster, 5);
+//     console.log(`Hp: ${result[0]}, Atk: ${result[1]}, Def: ${result[2]}, AP: ${result[3]}`);
+// } else {
+//     console.warn(`Test monster "${_testMonsterName}" not found in Monsters array.`);
+// }
 
 export {calc, hpCalc, atkDefCalc, apCalc};

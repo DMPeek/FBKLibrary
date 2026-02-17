@@ -3071,7 +3071,7 @@ export const Monsters = [
 {
   "": 118,
   monsterName: "Number 39: Utopia",
-  portrait: `/MonsterPortraits/Number 39: Utopia.png`,
+  portrait: `/MonsterPortraits/Number 39 - Utopia.png`,
   class: "Warrior",
   hp: 1100,
   atk: 2500,
