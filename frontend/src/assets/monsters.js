@@ -3305,7 +3305,7 @@ export const Monsters = [
 {
   "": 127,
   monsterName: "Pumpking the King of Ghosts",
-  portrait: `/MonsterPortraits/Pumpking the King of Ghosts.png`,
+  portrait: `/MonsterPortraits/Pumpking the King of Ghost.png`,
   class: "Fiend",
   hp: 1200,
   atk: 1800,
