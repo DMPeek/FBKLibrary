@@ -753,3 +753,38 @@ body.lvl-calc .comparison-graphs-grid canvas {
 .ai-logo {
     color: #ffb300;
 }
+
+.mode-selector-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.mode-button {
+    padding: 0.64rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #ffb300;
+    font-size: 0.96rem;
+    font-weight: 500;
+    background: transparent;
+    color: #ffb300;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.mode-button:hover {
+    background: rgba(255, 179, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.mode-button.active {
+    background: #ffb300;
+    color: #222;
+    box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3);
+}
+
+.mode-button.active:hover {
+    background: #ffd54f;
+}
