@@ -1,5 +1,5 @@
 //refactor code later
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles.css';
 import { Monsters } from '../assets/monsters';
 import { Marshalls } from '../assets/marshalls';
@@ -34,15 +34,16 @@ function MonsterDropdown({ items, onSelect, isOpen, setIsOpen, nameKey = 'monste
     ) : null;
 }
 
-function TeamBuilderCard({ openDropdownIdx, setOpenDropdownIdx }) {
-    const [leader, setLeader] = useState(null);
-    const [members, setMembers] = useState([null, null, null]);
+function TeamBuilderCard({ cardData, onCardUpdate, openDropdownIdx, setOpenDropdownIdx }) {
+    // Extract leader and members from cardData
+    const leader = cardData.leader;
+    const members = cardData.members;
 
     // Handler for member selection
     const handleMemberSelect = (idx, monster) => {
         const newMembers = [...members];
         newMembers[idx] = monster;
-        setMembers(newMembers);
+        onCardUpdate(leader, newMembers);
     };
 
     return (
@@ -84,7 +85,7 @@ function TeamBuilderCard({ openDropdownIdx, setOpenDropdownIdx }) {
                 }}>
                     <MonsterDropdown
                         items={Marshalls}
-                        onSelect={m => { setLeader(m); setOpenDropdownIdx(null); }}
+                        onSelect={m => { onCardUpdate(m, members); setOpenDropdownIdx(null); }}
                         isOpen={openDropdownIdx === 0}
                         setIsOpen={open => setOpenDropdownIdx(open ? 0 : null)}
                         nameKey="marshallName"
@@ -146,10 +147,49 @@ export default function TeamBuilder() {
     // Track which dropdown is open globally
     const [openDropdownIdx, setOpenDropdownIdx] = useState(null);
 
+    // Load team cards from localStorage or initialize empty
+    const [teamCards, setTeamCards] = useState(() => {
+        const saved = localStorage.getItem('fbk_teambuilder_cards');
+        if (saved) {
+            try {
+                return JSON.parse(saved);
+            } catch (e) {
+                console.error('Failed to load team cards from localStorage:', e);
+                return Array.from({ length: 10 }, () => ({
+                    leader: null,
+                    members: [null, null, null]
+                }));
+            }
+        }
+        // Initialize with 10 empty cards
+        return Array.from({ length: 10 }, () => ({
+            leader: null,
+            members: [null, null, null]
+        }));
+    });
+
+    // Save team cards to localStorage whenever they change
+    useEffect(() => {
+        localStorage.setItem('fbk_teambuilder_cards', JSON.stringify(teamCards));
+    }, [teamCards]);
+
+    // Handler to update a specific card
+    const updateCard = (cardIdx, leader, members) => {
+        const newCards = [...teamCards];
+        newCards[cardIdx] = { leader, members };
+        setTeamCards(newCards);
+    };
+
     // Create an array of 10 cards
-    const cards = Array.from({ length: 10 }, (_, i) =>
-        <TeamBuilderCard key={i} openDropdownIdx={openDropdownIdx === null ? null : openDropdownIdx === i * 4 ? 0 : openDropdownIdx === i * 4 + 1 ? 1 : openDropdownIdx === i * 4 + 2 ? 2 : openDropdownIdx === i * 4 + 3 ? 3 : null} setOpenDropdownIdx={idx => setOpenDropdownIdx(idx !== null ? i * 4 + idx : null)} />
-    );
+    const cards = Array.from({ length: 10 }, (_, i) => (
+        <TeamBuilderCard
+            key={i}
+            cardData={teamCards[i]}
+            onCardUpdate={(leader, members) => updateCard(i, leader, members)}
+            openDropdownIdx={openDropdownIdx === null ? null : openDropdownIdx === i * 4 ? 0 : openDropdownIdx === i * 4 + 1 ? 1 : openDropdownIdx === i * 4 + 2 ? 2 : openDropdownIdx === i * 4 + 3 ? 3 : null}
+            setOpenDropdownIdx={idx => setOpenDropdownIdx(idx !== null ? i * 4 + idx : null)}
+        />
+    ));
 
     return (
         <div>
@@ -165,6 +205,20 @@ export default function TeamBuilder() {
             </header>
             <main className="main-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '56px' }}>
                 <h2 style={{marginBottom: '24px'}}>Build you some teams</h2>
+                <button
+                    onClick={() => {
+                        const emptyCards = Array.from({ length: 10 }, () => ({
+                            leader: null,
+                            members: [null, null, null]
+                        }));
+                        setTeamCards(emptyCards);
+                        localStorage.removeItem('fbk_teambuilder_cards');
+                    }}
+                    className="mode-button"
+                    style={{ marginBottom: '24px' }}
+                >
+                    Clear All Selections
+                </button>
                 {[0, 1, 2].map(row => (
                     <div key={row} style={{ display: 'flex', gap: '32px', marginBottom: '32px', justifyContent: 'center' }}>
                         {cards.slice(row * 3, row * 3 + 3)}

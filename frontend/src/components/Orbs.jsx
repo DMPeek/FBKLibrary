@@ -151,12 +151,37 @@ function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv }) {
 }
 
 export default function Orbs() {
-    const [query, setSearch] = useState('');
-    const [selectedMonsters, setSelectedMonsters] = useState([null, null]);
+    const [query, setSearch] = useState(() => localStorage.getItem('fbk_orbs_query') || '');
+    const [selectedMonsters, setSelectedMonsters] = useState(() => {
+        const saved = localStorage.getItem('fbk_orbs_selectedMonster');
+        return saved ? [JSON.parse(saved), null] : [null, null];
+    });
     const [monRGB, setMonRGB] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState([false, false]);
     const [orbResults, setResults] = useState([]);
-    const [comparisonMode, setComparisonMode] = useState(0); // 0 = Monster to Monster, 1 = Marshall to Monster, 2 = Monster to Marshall
+    const [comparisonMode, setComparisonMode] = useState(() => {
+        const saved = localStorage.getItem('fbk_orbs_comparisonMode');
+        return saved ? parseInt(saved) : 0;
+    });
+    
+    // Save query to localStorage
+    useEffect(() => {
+        localStorage.setItem('fbk_orbs_query', query);
+    }, [query]);
+
+    // Save selected monster to localStorage
+    useEffect(() => {
+        if (selectedMonsters[0]) {
+            localStorage.setItem('fbk_orbs_selectedMonster', JSON.stringify(selectedMonsters[0]));
+        } else {
+            localStorage.removeItem('fbk_orbs_selectedMonster');
+        }
+    }, [selectedMonsters[0]]);
+
+    // Save comparison mode to localStorage
+    useEffect(() => {
+        localStorage.setItem('fbk_orbs_comparisonMode', comparisonMode.toString());
+    }, [comparisonMode]);
     
     // Determine what to show in dropdown based on comparison mode
     const dropdownItems = comparisonMode === 1 ? Marshalls : Monsters;
