@@ -40,19 +40,19 @@ export const Marshalls = [
 {
     "": 6,
     marshallName: "Duke D.",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Duke.png",
     hex: "FFC0FF"
 },
 {
     "": 7,
     marshallName: "Bakura",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Bakura.png",
     hex: "9448FA"
 },
 {
     "": 8,
     marshallName: "Fizdis",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Fizdis.png",
     hex: "74563C"
 },
 {
@@ -82,7 +82,7 @@ export const Marshalls = [
 {
     "": 13,
     marshallName: "Labyrinth Ruler",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/LabyrinthRuler.png",
     hex: "CF9C0D"
 },
 {
@@ -106,13 +106,13 @@ export const Marshalls = [
 {
     "": 17,
     marshallName: "Mokuba",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Mokuba.png",
     hex: "0069B3"
 },
 {
     "": 18,
     marshallName: "Roland",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Roland.png",
     hex: "141414"
 },
 {
@@ -124,13 +124,13 @@ export const Marshalls = [
 {
     "": 20,
     marshallName: "Jussell",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Jussell.png",
     hex: "8CA690"
 },
 {
     "": 21,
     marshallName: "Malairuka",
-    portrait: "/MarshallPortraits/krock.png",
+    portrait: "/MarshallPortraits/Malairuka.png",
     hex: "BA722A"
 },
 ]
