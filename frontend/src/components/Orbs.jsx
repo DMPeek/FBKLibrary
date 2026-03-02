@@ -46,16 +46,81 @@ function findClosestMonsters(monsterName, monsters, topN = 15) {
     return closest;
 }
 
+function findClosestMarshalls(monsterName, monsters, marshalls, topN = 15) {
+    // Find the target monster
+    const target = monsters.find(m => m.monsterName.toLowerCase() === monsterName.toLowerCase());
+    if (!target) {
+        console.log("Monster not found.");
+        return;
+    }
+    const targetRGB = hexToRGB(target.hex);
+    if (!targetRGB) {
+        console.log("Invalid hex for target monster.");
+        return;
+    }
+
+    // Calculate differences for all marshalls
+    const diffs = marshalls
+        .map(m => {
+            const rgb = hexToRGB(m.hex);
+            if (!rgb) return { Name: m.marshallName, totalDiff: Infinity };
+            const rdiff = Math.abs(targetRGB[0] - rgb[0]);
+            const gdiff = Math.abs(targetRGB[1] - rgb[1]);
+            const bdiff = Math.abs(targetRGB[2] - rgb[2]);
+            const totalDiff = rdiff + gdiff + bdiff;
+            return { Name: m, totalDiff, rgb, rdiff, gdiff, bdiff };
+        });
+
+    // Sort by ascending and get top N
+    const closest = diffs
+        .sort((a, b) => a.totalDiff - b.totalDiff)
+        .slice(0, topN);
+    return closest;
+}
+
+function findClosestMonstersByMarshall(marshallName, marshalls, monsters, topN = 15) {
+    // Find the target marshall
+    const target = marshalls.find(m => m.marshallName.toLowerCase() === marshallName.toLowerCase());
+    if (!target) {
+        console.log("Marshall not found.");
+        return;
+    }
+    const targetRGB = hexToRGB(target.hex);
+    if (!targetRGB) {
+        console.log("Invalid hex for target marshall.");
+        return;
+    }
+
+    // Calculate differences for all monsters
+    const diffs = monsters
+        .map(m => {
+            const rgb = hexToRGB(m.hex);
+            if (!rgb) return { Name: m.monsterName, totalDiff: Infinity };
+            const rdiff = Math.abs(targetRGB[0] - rgb[0]);
+            const gdiff = Math.abs(targetRGB[1] - rgb[1]);
+            const bdiff = Math.abs(targetRGB[2] - rgb[2]);
+            const totalDiff = rdiff + gdiff + bdiff;
+            return { Name: m, totalDiff, rgb, rdiff, gdiff, bdiff };
+        });
+
+    // Sort by ascending and get top N
+    const closest = diffs
+        .sort((a, b) => a.totalDiff - b.totalDiff)
+        .slice(0, topN);
+    return closest;
+}
+
 // findClosestMonsters("Ansatsu", Monsters); // update "ansatsu" with query from orb page
 
 // ...existing imports and functions...
 
 function OrbCard({ monster, cardRGB }) {
     if (!monster) return null;
+    const name = monster.monsterName || monster.marshallName;
     return (
         <div className='orb-card monster-card'>
-            <img className="monster-portrait" src={monster.portrait} alt={`${monster.monsterName} portrait`} />
-            <h2>{monster.monsterName}</h2>
+            <img className="monster-portrait" src={monster.portrait} alt={`${name} portrait`} />
+            <h2>{name}</h2>
             <div className="orb-fields-grid">
                 <div className="orb-field r-value"><span>R Value:</span> <span>{cardRGB && cardRGB[0]}</span></div>
                 <div className="orb-field g-value"><span>G Value:</span> <span>{cardRGB && cardRGB[1]}</span></div>
@@ -67,10 +132,11 @@ function OrbCard({ monster, cardRGB }) {
 
 function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv }) {
     if (!monster) return null;
+    const name = monster.monsterName || monster.marshallName;
     return (
         <div className='orb-card monster-card'>
-            <img className="monster-portrait" src={monster.portrait} alt={`${monster.monsterName} portrait`} />
-            <h2>{}{monster.monsterName}</h2>
+            <img className="monster-portrait" src={monster.portrait} alt={`${name} portrait`} />
+            <h2>{name}</h2>
             <div className='monster-field total-value'><span>Total Diff:</span> <span>{tDiff}</span></div>
             <div className='orb-fields-grid'>
                 <div className="orb-field r-value"><span>R Value:</span> <span>{cardRGB && cardRGB[0]}</span></div>
@@ -90,16 +156,36 @@ export default function Orbs() {
     const [monRGB, setMonRGB] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState([false, false]);
     const [orbResults, setResults] = useState([]);
-    const filteredMonsters = Monsters.filter(m => m.monsterName.toLowerCase().includes(query.toLowerCase()));
+    const [comparisonMode, setComparisonMode] = useState(0); // 0 = Monster to Monster, 1 = Marshall to Monster, 2 = Monster to Marshall
+    
+    // Determine what to show in dropdown based on comparison mode
+    const dropdownItems = comparisonMode === 1 ? Marshalls : Monsters;
+    const filteredMonsters = dropdownItems.filter(m => {
+        const name = comparisonMode === 1 ? m.marshallName : m.monsterName;
+        return name.toLowerCase().includes(query.toLowerCase());
+    });
 
-    // Update orbResults when selectedMonsters[0] changes
+    // Update orbResults when selectedMonsters[0] changes or comparisonMode changes
     useEffect(() => {
         if (selectedMonsters[0]) {
-            setResults(findClosestMonsters(selectedMonsters[0].monsterName, Monsters) || []);
+            let results = [];
+            
+            if (comparisonMode === 0) {
+                // Monster to Monster
+                results = findClosestMonsters(selectedMonsters[0].monsterName, Monsters) || [];
+            } else if (comparisonMode === 1) {
+                // Marshall to Monster
+                results = findClosestMonstersByMarshall(selectedMonsters[0].marshallName, Marshalls, Monsters) || [];
+            } else if (comparisonMode === 2) {
+                // Monster to Marshall
+                results = findClosestMarshalls(selectedMonsters[0].monsterName, Monsters, Marshalls) || [];
+            }
+            
+            setResults(results);
         } else {
             setResults([]);
         }
-    }, [selectedMonsters[0]]);
+    }, [selectedMonsters[0], comparisonMode]);
 
     return (
         <div>
@@ -114,7 +200,45 @@ export default function Orbs() {
                 </nav>
             </header>
             <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-                <h2 style={{marginBottom: '24px'}}>Looks up RGB values of orbs to return top 15 mons with the closest orb colors to your selection</h2>
+                <h2 style={{marginBottom: '24px'}}>Looks up RGB values of orbs to return top 15 mons or marshalls with the closest orb colors to your selection</h2>
+                <div className="mode-selector-buttons" style={{ display: 'flex', gap: '12px', marginBottom: '24px', justifyContent: 'center' }}>
+                    <button
+                        className={`mode-button ${comparisonMode === 0 ? 'active' : ''}`}
+                        onClick={() => {
+                            setComparisonMode(0);
+                            setSearch('');
+                            setSelectedMonsters([null, null]);
+                            setMonRGB(null);
+                            setResults([]);
+                        }}
+                    >
+                        Monster to Monster
+                    </button>
+                    <button
+                        className={`mode-button ${comparisonMode === 1 ? 'active' : ''}`}
+                        onClick={() => {
+                            setComparisonMode(1);
+                            setSearch('');
+                            setSelectedMonsters([null, null]);
+                            setMonRGB(null);
+                            setResults([]);
+                        }}
+                    >
+                        Marshall to Monster
+                    </button>
+                    <button
+                        className={`mode-button ${comparisonMode === 2 ? 'active' : ''}`}
+                        onClick={() => {
+                            setComparisonMode(2);
+                            setSearch('');
+                            setSelectedMonsters([null, null]);
+                            setMonRGB(null);
+                            setResults([]);
+                        }}
+                    >
+                        Monster to Marshall
+                    </button>
+                </div>
                 <div className="orb-holder">
                     <div className='orb-search-bar'>
                         <div className="monster-search">
@@ -130,11 +254,21 @@ export default function Orbs() {
                                 onKeyDown={e => {
                                     if (e.key === "Enter") {
                                         setIsDropdownOpen([false, isDropdownOpen[1]]);
-                                        const match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
+                                        
+                                        let match;
+                                        if (comparisonMode === 1) {
+                                            // Marshall to Monster
+                                            match = Marshalls.find(m => m.marshallName.toLowerCase() === e.target.value.toLowerCase());
+                                        } else {
+                                            // Monster to Monster or Monster to Marshall
+                                            match = Monsters.find(m => m.monsterName.toLowerCase() === e.target.value.toLowerCase());
+                                        }
+                                        
                                         if (match) {
                                             setSelectedMonsters([match, selectedMonsters[1]]);
                                             setMonRGB(hexToRGB(match.hex));
-                                            setSearch(match.monsterName);
+                                            const displayName = comparisonMode === 1 ? match.marshallName : match.monsterName;
+                                            setSearch(displayName);
                                         }
                                     }
                                 }}
@@ -142,14 +276,17 @@ export default function Orbs() {
                                 autoComplete="off"
                             />
                             <ul className={`monster-dropdown dropdown-list${isDropdownOpen[0] && filteredMonsters.length > 0 ? ' show' : ''}`}>
-                                {filteredMonsters.map(monster => (
-                                    <li key={monster.monsterName} onMouseDown={() => {
-                                        setSelectedMonsters([monster, selectedMonsters[1]]);
-                                        setMonRGB(hexToRGB(monster.hex));
-                                        setSearch(monster.monsterName);
-                                        setIsDropdownOpen([false, isDropdownOpen[1]]);
-                                    }}>{monster.monsterName}</li>
-                                ))}
+                                {filteredMonsters.map(item => {
+                                    const displayName = comparisonMode === 1 ? item.marshallName : item.monsterName;
+                                    return (
+                                        <li key={item.monsterName || item.marshallName} onMouseDown={() => {
+                                            setSelectedMonsters([item, selectedMonsters[1]]);
+                                            setMonRGB(hexToRGB(item.hex));
+                                            setSearch(displayName);
+                                            setIsDropdownOpen([false, isDropdownOpen[1]]);
+                                        }}>{displayName}</li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>
