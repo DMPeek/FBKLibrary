@@ -382,6 +382,24 @@ export default function Compare() {
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
         <h2 style={{marginBottom: '24px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting.</h2>
+        <button
+          onClick={() => {
+            setSearch1('');
+            setSearch2('');
+            setSearch3('');
+            setSelectedMonsters([null, null, null]);
+            setLevels([null, null, null]);
+            localStorage.removeItem('fbk_calculator_search1');
+            localStorage.removeItem('fbk_calculator_search2');
+            localStorage.removeItem('fbk_calculator_search3');
+            localStorage.removeItem('fbk_calculator_selectedMonsters');
+            localStorage.removeItem('fbk_calculator_levels');
+          }}
+          className="mode-button"
+          style={{ marginBottom: '24px' }}
+        >
+          Clear All Selections
+        </button>
         <div className="cards-row" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', marginBottom: '0px', flexWrap: 'wrap' }}>
           <div className="card-holder">
             <div className="monster-search">
