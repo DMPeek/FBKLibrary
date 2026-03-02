@@ -205,6 +205,20 @@ export default function TeamBuilder() {
             </header>
             <main className="main-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '56px' }}>
                 <h2 style={{marginBottom: '24px'}}>Build you some teams</h2>
+                <button
+                    onClick={() => {
+                        const emptyCards = Array.from({ length: 10 }, () => ({
+                            leader: null,
+                            members: [null, null, null]
+                        }));
+                        setTeamCards(emptyCards);
+                        localStorage.removeItem('fbk_teambuilder_cards');
+                    }}
+                    className="mode-button"
+                    style={{ marginBottom: '24px' }}
+                >
+                    Clear All Selections
+                </button>
                 {[0, 1, 2].map(row => (
                     <div key={row} style={{ display: 'flex', gap: '32px', marginBottom: '32px', justifyContent: 'center' }}>
                         {cards.slice(row * 3, row * 3 + 3)}
