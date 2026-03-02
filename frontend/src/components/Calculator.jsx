@@ -249,16 +249,45 @@ function ComparisonGraph({ monsters, stat, id }) {
 // prepares Compare webpage for export to use in App.jsx
 export default function Compare() {
   // set up useState variables for component
-  const [search1, setSearch1] = useState('');
-  const [search2, setSearch2] = useState('');
-  const [search3, setSearch3] = useState('');
-  const [selectedMonsters, setSelectedMonsters] = useState([null, null, null]);
-  const [levels, setLevels] = useState([null, null, null]);
+  const [search1, setSearch1] = useState(() => localStorage.getItem('fbk_calculator_search1') || '');
+  const [search2, setSearch2] = useState(() => localStorage.getItem('fbk_calculator_search2') || '');
+  const [search3, setSearch3] = useState(() => localStorage.getItem('fbk_calculator_search3') || '');
+  const [selectedMonsters, setSelectedMonsters] = useState(() => {
+    const saved = localStorage.getItem('fbk_calculator_selectedMonsters');
+    return saved ? JSON.parse(saved) : [null, null, null];
+  });
+  const [levels, setLevels] = useState(() => {
+    const saved = localStorage.getItem('fbk_calculator_levels');
+    return saved ? JSON.parse(saved) : [null, null, null];
+  });
   const [isDropdownOpen, setIsDropdownOpen] = useState([false, false, false]);
   const blurTimeoutsRef = useRef([null, null, null]); // Track pending blur timeouts for each search
   const filteredMonsters1 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search1.toLowerCase()));
   const filteredMonsters2 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search2.toLowerCase()));
   const filteredMonsters3 = Monsters.filter(m => m.monsterName.toLowerCase().includes(search3.toLowerCase()));
+
+  // Save search inputs to localStorage
+  useEffect(() => {
+    localStorage.setItem('fbk_calculator_search1', search1);
+  }, [search1]);
+
+  useEffect(() => {
+    localStorage.setItem('fbk_calculator_search2', search2);
+  }, [search2]);
+
+  useEffect(() => {
+    localStorage.setItem('fbk_calculator_search3', search3);
+  }, [search3]);
+
+  // Save selected monsters to localStorage
+  useEffect(() => {
+    localStorage.setItem('fbk_calculator_selectedMonsters', JSON.stringify(selectedMonsters));
+  }, [selectedMonsters]);
+
+  // Save levels to localStorage
+  useEffect(() => {
+    localStorage.setItem('fbk_calculator_levels', JSON.stringify(levels));
+  }, [levels]);
 
   // Helper to handle focus: clear other timeouts and open the focused dropdown
   const handleSearchFocus = (idx) => {
