@@ -119,6 +119,11 @@ function findClosestMarshallForTeam(monsters, marshalls, topN = 15) {
         const rgb = hexToRGB(m.hex);
         if (!rgb) return { Name: m.marshallName, totalDiff: Infinity };
 
+        // build arrays of R/G/B values (marshall + each monster)
+        const rVals = [rgb[0]];
+        const gVals = [rgb[1]];
+        const bVals = [rgb[2]];
+
         let rdiff = 0;
         let gdiff = 0;
         let bdiff = 0;
@@ -128,12 +133,15 @@ function findClosestMarshallForTeam(monsters, marshalls, topN = 15) {
                 rdiff = gdiff = bdiff = Infinity;
                 return;
             }
+            rVals.push(monRGB[0]);
+            gVals.push(monRGB[1]);
+            bVals.push(monRGB[2]);
             rdiff += Math.abs(monRGB[0] - rgb[0]);
             gdiff += Math.abs(monRGB[1] - rgb[1]);
             bdiff += Math.abs(monRGB[2] - rgb[2]);
         });
         const totalDiff = rdiff + gdiff + bdiff;
-        return { Name: m, totalDiff, rgb, rdiff, gdiff, bdiff };
+        return { Name: m, totalDiff, rgb, rdiff, gdiff, bdiff, rVals, gVals, bVals };
     });
 
     return diffs
@@ -161,9 +169,21 @@ function OrbCard({ monster, cardRGB }) {
     );
 }
 
-function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv }) {
+// utility: compute battles-to-sync from either diffs or value arrays
+function computeBattlesToSync(rv, gv, bv, rVals, gVals, bVals) {
+    if (rVals && gVals && bVals) {
+        const range = arr => Math.max(...arr) - Math.min(...arr);
+        const maxRange = Math.max(range(rVals), range(gVals), range(bVals));
+        return Math.ceil(maxRange / 2);
+    }
+    const maxDiff = Math.max(rv || 0, gv || 0, bv || 0);
+    return Math.ceil(maxDiff / 2);
+}
+
+function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv, rVals, gVals, bVals }) {
     if (!monster) return null;
     const name = monster.monsterName || monster.marshallName;
+    const battles = computeBattlesToSync(rv, gv, bv, rVals, gVals, bVals);
     return (
         <div className='orb-card monster-card'>
             <img className="monster-portrait" src={monster.portrait} alt={`${name} portrait`} />
@@ -176,6 +196,7 @@ function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv }) {
                 <div className="orb-field r-value"><span>R Diff:</span> <span>{rv}</span></div>
                 <div className="orb-field g-value"><span>G Diff:</span> <span>{gv}</span></div>
                 <div className="orb-field b-value"><span>B Diff:</span> <span>{bv}</span></div>
+                <div className="orb-field total-value" style={{ gridColumn: 'span 3' }}><span>Battles to Sync:</span> <span>{battles}</span></div>
             </div>
         </div>
     );
@@ -516,6 +537,9 @@ export default function Orbs() {
                                     rv={result.rdiff}
                                     gv={result.gdiff}
                                     bv={result.bdiff}
+                                    rVals={result.rVals}
+                                    gVals={result.gVals}
+                                    bVals={result.bVals}
                                 />
                             ))}
                         </div>
