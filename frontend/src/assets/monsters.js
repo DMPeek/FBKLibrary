@@ -50,7 +50,7 @@ export const Monsters = [
   ability3UnlockLvl: 15,
   ability3: "Lucky",
   hex: "030078",
-  id: 65
+  id: 64
 },
 {
   "": 2,
@@ -102,7 +102,7 @@ export const Monsters = [
   ability3UnlockLvl: 35,
   ability3: "Status Guard",
   hex: "00D7E4",
-  id: 47
+  id: 46
 },
 {
   "": 4,
@@ -180,7 +180,7 @@ export const Monsters = [
   ability3UnlockLvl: 10,
   ability3: "Lucky",
   hex: "C37600",
-  id: 63
+  id: 62
 },
 {
   "": 7,
@@ -492,7 +492,7 @@ export const Monsters = [
   ability3UnlockLvl: -1,
   ability3: "No Effect",
   hex: "5744FB",
-  id: 54
+  id: 53
 },
 {
   "": 19,
@@ -752,7 +752,7 @@ export const Monsters = [
   ability3UnlockLvl: 10,
   ability3: "Swift",
   hex: "78E420",
-  id: 62
+  id: 61
 },
 {
   "": 29,
@@ -1220,7 +1220,7 @@ export const Monsters = [
   ability3UnlockLvl: 30,
   ability3: "Status Guard",
   hex: "780064",
-  id: 49
+  id: 48
 },
 {
   "": 47,
@@ -1324,7 +1324,7 @@ export const Monsters = [
   ability3UnlockLvl: 25,
   ability3: "Astral Barrier",
   hex: "F0F5FB",
-  id: 52
+  id: 51
 },
 {
   "": 51,
@@ -1480,7 +1480,7 @@ export const Monsters = [
   ability3UnlockLvl: 20,
   ability3: "Lucky",
   hex: "96B07F",
-  id: 98
+  id: 99
 },
 {
   "": 57,
@@ -1532,7 +1532,7 @@ export const Monsters = [
   ability3UnlockLvl: 10,
   ability3: "Swift",
   hex: "F04000",
-  id: 56
+  id: 55
 },
 {
   "": 59,
@@ -1584,7 +1584,7 @@ export const Monsters = [
   ability3UnlockLvl: 1,
   ability3: "Lucky",
   hex: "2020C8",
-  id: 61
+  id: 60
 },
 {
   "": 61,
@@ -1610,7 +1610,7 @@ export const Monsters = [
   ability3UnlockLvl: 30,
   ability3: "Armor",
   hex: "1010C8",
-  id: 60
+  id: 59
 },
 {
   "": 62,
@@ -1740,7 +1740,7 @@ export const Monsters = [
   ability3UnlockLvl: 40,
   ability3: "Status Guard",
   hex: "780033",
-  id: 50
+  id: 49
 },
 {
   "": 67,
@@ -1766,7 +1766,7 @@ export const Monsters = [
   ability3UnlockLvl: 40,
   ability3: "Status Guard",
   hex: "780033",
-  id: 51
+  id: 50
 },
 {
   "": 68,
@@ -1896,7 +1896,7 @@ export const Monsters = [
   ability3UnlockLvl: 10,
   ability3: "Castle Adept",
   hex: "CBF6C6",
-  id: 53
+  id: 52
 },
 {
   "": 73,
@@ -2134,6 +2134,32 @@ export const Monsters = [
 },
 {
   "": 82,
+  monsterName: "Humanoid Worm Drake",
+  portrait: `/MonsterPortraits/HumanoidWormDrake.png`,
+  class: "Beast",
+  hp: 1200,
+  atk: 2200,
+  def: 2000,
+  ap: 3,
+  gt: 9,
+  luck: 5,
+  speed: 90,
+  attackEffectUnlockLvl: 10,
+  attackEffect: "AP-Drain 2",
+  specialUnlockLvl: -1,
+  specialName: "No Effect",
+  specialEffect: "No Effect",
+  ability1UnlockLvl: 1,
+  ability1: "Water Adept",
+  ability2UnlockLvl: 1,
+  ability2: "Slime Reborn",
+  ability3UnlockLvl: 25,
+  ability3: "Super Stamina",
+  hex: "A0A000",
+  id: 98
+},
+{
+  "": 83,
   monsterName: "Hunter Spider",
   portrait: `/MonsterPortraits/Hunter Spider.png`,
   class: "Beast",
@@ -2159,7 +2185,7 @@ export const Monsters = [
   id: 95
 },
 {
-  "": 83,
+  "": 84,
   monsterName: "Illusionist Faceless Mage",
   portrait: `/MonsterPortraits/Illusionist Faceless Mage.png`,
   class: "Spellcaster",
@@ -2185,7 +2211,7 @@ export const Monsters = [
   id: 39
 },
 {
-  "": 84,
+  "": 85,
   monsterName: "Insect Queen",
   portrait: `/MonsterPortraits/Insect Queen.png`,
   class: "Beast",
@@ -2211,7 +2237,7 @@ export const Monsters = [
   id: 87
 },
 {
-  "": 85,
+  "": 86,
   monsterName: "Invitation to a Dark Sleep",
   portrait: `/MonsterPortraits/Invitation to a Dark Sleep.png`,
   class: "Spellcaster",
@@ -2237,7 +2263,7 @@ export const Monsters = [
   id: 44
 },
 {
-  "": 86,
+  "": 87,
   monsterName: "Jinzo",
   portrait: `/MonsterPortraits/Jinzo.png`,
   class: "Machine",
@@ -2263,7 +2289,7 @@ export const Monsters = [
   id: 167
 },
 {
-  "": 87,
+  "": 88,
   monsterName: "Judge Man",
   portrait: `/MonsterPortraits/Judge Man.png`,
   class: "Warrior",
@@ -2286,10 +2312,10 @@ export const Monsters = [
   ability3UnlockLvl: 20,
   ability3: "Armor",
   hex: "0080F0",
-  id: 59
+  id: 58
 },
 {
-  "": 88,
+  "": 89,
   monsterName: "Kairyu-Shin",
   portrait: `/MonsterPortraits/Kairyu-Shin.png`,
   class: "Dragon",
@@ -2315,7 +2341,7 @@ export const Monsters = [
   id: 24
 },
 {
-  "": 89,
+  "": 90,
   monsterName: "Kaiser Dragon",
   portrait: `/MonsterPortraits/Kaiser Dragon.png`,
   class: "Dragon",
@@ -2341,7 +2367,7 @@ export const Monsters = [
   id: 5
 },
 {
-  "": 90,
+  "": 91,
   monsterName: "Kanan the Swordmistress",
   portrait: `/MonsterPortraits/Kanan the Swordmistress.png`,
   class: "Warrior",
@@ -2367,7 +2393,7 @@ export const Monsters = [
   id: 66
 },
 {
-  "": 91,
+  "": 92,
   monsterName: "Kanikabuto",
   portrait: `/MonsterPortraits/Kanikabuto.png`,
   class: "Beast",
@@ -2393,7 +2419,7 @@ export const Monsters = [
   id: 102
 },
 {
-  "": 92,
+  "": 93,
   monsterName: "Kazejin",
   portrait: `/MonsterPortraits/Kazejin.png`,
   class: "Spirit",
@@ -2419,7 +2445,7 @@ export const Monsters = [
   id: 108
 },
 {
-  "": 93,
+  "": 94,
   monsterName: "King of Yamimakai",
   portrait: `/MonsterPortraits/King of Yamimakai.png`,
   class: "Fiend",
@@ -2445,7 +2471,7 @@ export const Monsters = [
   id: 143
 },
 {
-  "": 94,
+  "": 95,
   monsterName: "Kuriboh",
   portrait: `/MonsterPortraits/Kuriboh.png`,
   class: "Fiend",
@@ -2471,7 +2497,7 @@ export const Monsters = [
   id: 140
 },
 {
-  "": 95,
+  "": 96,
   monsterName: "La Jinn the Mystical Genie of the Lamp",
   portrait: `/MonsterPortraits/La Jinn the Mystical Genie of the Lamp.png`,
   class: "Fiend",
@@ -2497,7 +2523,7 @@ export const Monsters = [
   id: 147
 },
 {
-  "": 96,
+  "": 97,
   monsterName: "Labyrinth Tank",
   portrait: `/MonsterPortraits/Labyrinth Tank.png`,
   class: "Machine",
@@ -2523,7 +2549,7 @@ export const Monsters = [
   id: 155
 },
 {
-  "": 97,
+  "": 98,
   monsterName: "Larvae Moth",
   portrait: `/MonsterPortraits/Larvae Moth.png`,
   class: "Beast",
@@ -2549,7 +2575,7 @@ export const Monsters = [
   id: 91
 },
 {
-  "": 98,
+  "": 99,
   monsterName: "Launcher Spider",
   portrait: `/MonsterPortraits/Launcher Spider.png`,
   class: "Machine",
@@ -2575,7 +2601,7 @@ export const Monsters = [
   id: 163
 },
 {
-  "": 99,
+  "": 100,
   monsterName: "Lava Battleguard",
   portrait: `/MonsterPortraits/Lava Battleguard.png`,
   class: "Warrior",
@@ -2598,10 +2624,10 @@ export const Monsters = [
   ability3UnlockLvl: 20,
   ability3: "Castle Adept",
   hex: "3E4544",
-  id: 57
+  id: 56
 },
 {
-  "": 100,
+  "": 101,
   monsterName: "Lord of D.",
   portrait: `/MonsterPortraits/Lord of D.png`,
   class: "Spellcaster",
@@ -2627,7 +2653,7 @@ export const Monsters = [
   id: 43
 },
 {
-  "": 101,
+  "": 102,
   monsterName: "Machine King",
   portrait: `/MonsterPortraits/Machine King.png`,
   class: "Machine",
@@ -2653,7 +2679,7 @@ export const Monsters = [
   id: 165
 },
 {
-  "": 102,
+  "": 103,
   monsterName: "Magician of Black Chaos",
   portrait: `/MonsterPortraits/Magician of Black Chaos.png`,
   class: "Spellcaster",
@@ -2679,7 +2705,7 @@ export const Monsters = [
   id: 36
 },
 {
-  "": 103,
+  "": 104,
   monsterName: "Magician of Faith",
   portrait: `/MonsterPortraits/Magician of Faith.png`,
   class: "Spellcaster",
@@ -2705,7 +2731,7 @@ export const Monsters = [
   id: 32
 },
 {
-  "": 104,
+  "": 105,
   monsterName: "Man-Eater Bug",
   portrait: `/MonsterPortraits/Man-Eater Bug.png`,
   class: "Beast",
@@ -2731,7 +2757,7 @@ export const Monsters = [
   id: 94
 },
 {
-  "": 105,
+  "": 106,
   monsterName: "Mavelus",
   portrait: `/MonsterPortraits/Mavelus.png`,
   class: "Beast",
@@ -2757,7 +2783,7 @@ export const Monsters = [
   id: 85
 },
 {
-  "": 106,
+  "": 107,
   monsterName: "Megazowler",
   portrait: `/MonsterPortraits/Megazowler.png`,
   class: "Dragon",
@@ -2783,7 +2809,7 @@ export const Monsters = [
   id: 22
 },
 {
-  "": 107,
+  "": 108,
   monsterName: "Metalzoa",
   portrait: `/MonsterPortraits/Metalzoa.png`,
   class: "Machine",
@@ -2809,7 +2835,7 @@ export const Monsters = [
   id: 156
 },
 {
-  "": 108,
+  "": 109,
   monsterName: "Meteor Black Dragon",
   portrait: `/MonsterPortraits/Meteor Black Dragon.png`,
   class: "Dragon",
@@ -2835,7 +2861,7 @@ export const Monsters = [
   id: 12
 },
 {
-  "": 109,
+  "": 110,
   monsterName: "Meteor Dragon",
   portrait: `/MonsterPortraits/Meteor Dragon.png`,
   class: "Dragon",
@@ -2861,7 +2887,7 @@ export const Monsters = [
   id: 14
 },
 {
-  "": 110,
+  "": 111,
   monsterName: "Midnight Fiend",
   portrait: `/MonsterPortraits/Midnight Fiend.png`,
   class: "Fiend",
@@ -2887,7 +2913,7 @@ export const Monsters = [
   id: 145
 },
 {
-  "": 111,
+  "": 112,
   monsterName: "Millennium Golem",
   portrait: `/MonsterPortraits/Millennium Golem.png`,
   class: "Spirit",
@@ -2913,7 +2939,7 @@ export const Monsters = [
   id: 121
 },
 {
-  "": 112,
+  "": 113,
   monsterName: "Moisture Creature",
   portrait: `/MonsterPortraits/Moisture Creature.png`,
   class: "Spirit",
@@ -2939,7 +2965,7 @@ export const Monsters = [
   id: 123
 },
 {
-  "": 113,
+  "": 114,
   monsterName: "Monster Tamer",
   portrait: `/MonsterPortraits/Monster Tamer.png`,
   class: "Warrior",
@@ -2965,7 +2991,7 @@ export const Monsters = [
   id: 67
 },
 {
-  "": 114,
+  "": 115,
   monsterName: "Mystic Horseman",
   portrait: `/MonsterPortraits/Mystic Horseman.png`,
   class: "Warrior",
@@ -2991,7 +3017,7 @@ export const Monsters = [
   id: 77
 },
 {
-  "": 115,
+  "": 116,
   monsterName: "Mystical Beast Serket",
   portrait: `/MonsterPortraits/Mystical Beast Serket.png`,
   class: "Spirit",
@@ -3017,7 +3043,7 @@ export const Monsters = [
   id: 126
 },
 {
-  "": 116,
+  "": 117,
   monsterName: "Mystical Elf",
   portrait: `/MonsterPortraits/Mystical Elf.png`,
   class: "Spellcaster",
@@ -3043,7 +3069,7 @@ export const Monsters = [
   id: 29
 },
 {
-  "": 117,
+  "": 118,
   monsterName: "Neck Hunter",
   portrait: `/MonsterPortraits/Neck Hunter.png`,
   class: "Fiend",
@@ -3069,7 +3095,7 @@ export const Monsters = [
   id: 151
 },
 {
-  "": 118,
+  "": 119,
   monsterName: "Number 39: Utopia",
   portrait: `/MonsterPortraits/Number 39 - Utopia.png`,
   class: "Warrior",
@@ -3095,7 +3121,7 @@ export const Monsters = [
   id: 79
 },
 {
-  "": 119,
+  "": 120,
   monsterName: "Obelisk the Tormentor",
   portrait: `/MonsterPortraits/Obelisk the Tormentor.png`,
   class: "God",
@@ -3119,32 +3145,6 @@ export const Monsters = [
   ability3: "No Effect",
   hex: "F0F0F0",
   id: 174
-},
-{
-  "": 120,
-  monsterName: "Octoberser",
-  portrait: `/MonsterPortraits/Octoberser.png`,
-  class: "Beast",
-  hp: 900,
-  atk: 1600,
-  def: 1400,
-  ap: 3,
-  gt: 1,
-  luck: 6,
-  speed: 80,
-  attackEffectUnlockLvl: 5,
-  attackEffect: "Undodgeable",
-  specialUnlockLvl: 20,
-  specialName: "Tidal Wave",
-  specialEffect: "AOE Damage+",
-  ability1UnlockLvl: 1,
-  ability1: "Water Adept",
-  ability2UnlockLvl: 10,
-  ability2: "Swift",
-  ability3UnlockLvl: 15,
-  ability3: "Lucky",
-  hex: "0286FF",
-  id: 99
 },
 {
   "": 121,
@@ -3304,6 +3304,32 @@ export const Monsters = [
 },
 {
   "": 127,
+  monsterName: "Princess of Tsurugi",
+  portrait: `/MonsterPortraits/PrincessTsurugi.png`,
+  class: "Warrior",
+  hp: 700,
+  atk: 900,
+  def: 700,
+  ap: 2,
+  gt: 13,
+  luck: 10,
+  speed: 70,
+  attackEffectUnlockLvl: 1,
+  attackEffect: "Drain Touch",
+  specialUnlockLvl: 30,
+  specialName: "Queen of Swords",
+  specialEffect: "AOE Damage++++",
+  ability1UnlockLvl: 1,
+  ability1: "Castle Adept",
+  ability2UnlockLvl: 1,
+  ability2: "Control Magic",
+  ability3UnlockLvl: 10,
+  ability3: "Swift",
+  hex: "00189D",
+  id: 65
+},
+{
+  "": 128,
   monsterName: "Pumpking the King of Ghosts",
   portrait: `/MonsterPortraits/Pumpking the King of Ghost.png`,
   class: "Fiend",
@@ -3329,7 +3355,7 @@ export const Monsters = [
   id: 134
 },
 {
-  "": 128,
+  "": 129,
   monsterName: "Queen of Autumn Leaves",
   portrait: `/MonsterPortraits/Queen of Autumn Leaves.png`,
   class: "Spirit",
@@ -3355,7 +3381,7 @@ export const Monsters = [
   id: 122
 },
 {
-  "": 129,
+  "": 130,
   monsterName: "Rabid Horseman",
   portrait: `/MonsterPortraits/Rabid Horseman.png`,
   class: "Warrior",
@@ -3381,7 +3407,7 @@ export const Monsters = [
   id: 74
 },
 {
-  "": 130,
+  "": 131,
   monsterName: "Reaper of the Cards",
   portrait: `/MonsterPortraits/Reaper of the Cards.png`,
   class: "Fiend",
@@ -3407,7 +3433,7 @@ export const Monsters = [
   id: 142
 },
 {
-  "": 131,
+  "": 132,
   monsterName: "Red-Eyes Black Dragon",
   portrait: `/MonsterPortraits/Red-Eyes Black Dragon.png`,
   class: "Dragon",
@@ -3433,7 +3459,7 @@ export const Monsters = [
   id: 8
 },
 {
-  "": 132,
+  "": 133,
   monsterName: "Red-Eyes Black Metal Dragon",
   portrait: `/MonsterPortraits/Red-Eyes Black Metal Dragon.png`,
   class: "Machine",
@@ -3459,7 +3485,7 @@ export const Monsters = [
   id: 160
 },
 {
-  "": 133,
+  "": 134,
   monsterName: "Robotic Knight",
   portrait: `/MonsterPortraits/Robotic Knight.png`,
   class: "Machine",
@@ -3485,7 +3511,7 @@ export const Monsters = [
   id: 164
 },
 {
-  "": 134,
+  "": 135,
   monsterName: "Rocket Warrior",
   portrait: `/MonsterPortraits/Rocket Warrior.png`,
   class: "Machine",
@@ -3511,7 +3537,7 @@ export const Monsters = [
   id: 173
 },
 {
-  "": 135,
+  "": 136,
   monsterName: "Rogue Doll",
   portrait: `/MonsterPortraits/Rogue Doll.png`,
   class: "Spellcaster",
@@ -3537,7 +3563,7 @@ export const Monsters = [
   id: 31
 },
 {
-  "": 136,
+  "": 137,
   monsterName: "Ryu-Kishin Powered",
   portrait: `/MonsterPortraits/Ryu-Kishin Powered.png`,
   class: "Fiend",
@@ -3563,7 +3589,7 @@ export const Monsters = [
   id: 148
 },
 {
-  "": 137,
+  "": 138,
   monsterName: "Ryu-Ran",
   portrait: `/MonsterPortraits/Ryu-Ran.png`,
   class: "Dragon",
@@ -3589,7 +3615,7 @@ export const Monsters = [
   id: 19
 },
 {
-  "": 138,
+  "": 139,
   monsterName: "Saggi the Dark Clown",
   portrait: `/MonsterPortraits/Saggi the Dark Clown.png`,
   class: "Spellcaster",
@@ -3615,7 +3641,7 @@ export const Monsters = [
   id: 38
 },
 {
-  "": 139,
+  "": 140,
   monsterName: "Sanga of the Thunder",
   portrait: `/MonsterPortraits/Sanga the Thunder.png`,
   class: "Spirit",
@@ -3641,7 +3667,7 @@ export const Monsters = [
   id: 107
 },
 {
-  "": 140,
+  "": 141,
   monsterName: "Sea King Dragon",
   portrait: `/MonsterPortraits/Sea King Dragon.png`,
   class: "Dragon",
@@ -3667,7 +3693,7 @@ export const Monsters = [
   id: 26
 },
 {
-  "": 141,
+  "": 142,
   monsterName: "Seiyaryu",
   portrait: `/MonsterPortraits/Seiyaryu.png`,
   class: "Dragon",
@@ -3693,7 +3719,7 @@ export const Monsters = [
   id: 3
 },
 {
-  "": 142,
+  "": 143,
   monsterName: "Sengenjin",
   portrait: `/MonsterPortraits/Sengenjin.png`,
   class: "Warrior",
@@ -3719,7 +3745,7 @@ export const Monsters = [
   id: 75
 },
 {
-  "": 143,
+  "": 144,
   monsterName: "Serpent Night Dragon",
   portrait: `/MonsterPortraits/Serpent Night Dragon.png`,
   class: "Dragon",
@@ -3745,7 +3771,7 @@ export const Monsters = [
   id: 11
 },
 {
-  "": 144,
+  "": 145,
   monsterName: "Serpentine Princess",
   portrait: `/MonsterPortraits/Serpentine Princess.png`,
   class: "Beast",
@@ -3771,7 +3797,7 @@ export const Monsters = [
   id: 97
 },
 {
-  "": 145,
+  "": 146,
   monsterName: "Shadow Ghoul",
   portrait: `/MonsterPortraits/Shadow Ghoul.png`,
   class: "Fiend",
@@ -3797,7 +3823,7 @@ export const Monsters = [
   id: 135
 },
 {
-  "": 146,
+  "": 147,
   monsterName: "Shadow Specter",
   portrait: `/MonsterPortraits/Shadow Specter.png`,
   class: "Fiend",
@@ -3823,7 +3849,7 @@ export const Monsters = [
   id: 128
 },
 {
-  "": 147,
+  "": 148,
   monsterName: "Silver Fang",
   portrait: `/MonsterPortraits/Silver Fang.png`,
   class: "Beast",
@@ -3849,7 +3875,7 @@ export const Monsters = [
   id: 81
 },
 {
-  "": 148,
+  "": 149,
   monsterName: "Skelgon",
   portrait: `/MonsterPortraits/Skelgon.png`,
   class: "Fiend",
@@ -3875,7 +3901,7 @@ export const Monsters = [
   id: 130
 },
 {
-  "": 149,
+  "": 150,
   monsterName: "Skull Knight",
   portrait: `/MonsterPortraits/Skull Knight.png`,
   class: "Spellcaster",
@@ -3901,7 +3927,7 @@ export const Monsters = [
   id: 40
 },
 {
-  "": 150,
+  "": 151,
   monsterName: "Slifer the Sky Dragon",
   portrait: `/MonsterPortraits/Slifer the Sky Dragon.png`,
   class: "God",
@@ -3927,7 +3953,7 @@ export const Monsters = [
   id: 175
 },
 {
-  "": 151,
+  "": 152,
   monsterName: "Slot Machine",
   portrait: `/MonsterPortraits/Slot Machine.png`,
   class: "Machine",
@@ -3953,7 +3979,7 @@ export const Monsters = [
   id: 162
 },
 {
-  "": 152,
+  "": 153,
   monsterName: "Stardust Dragon",
   portrait: `/MonsterPortraits/Stardust Dragon.png`,
   class: "Dragon",
@@ -3979,7 +4005,7 @@ export const Monsters = [
   id: 10
 },
 {
-  "": 153,
+  "": 154,
   monsterName: "Suijin",
   portrait: `/MonsterPortraits/Suijin.png`,
   class: "Spirit",
@@ -4005,7 +4031,7 @@ export const Monsters = [
   id: 109
 },
 {
-  "": 154,
+  "": 155,
   monsterName: "Summoned Skull",
   portrait: `/MonsterPortraits/Summoned Skull.png`,
   class: "Fiend",
@@ -4031,7 +4057,7 @@ export const Monsters = [
   id: 138
 },
 {
-  "": 155,
+  "": 156,
   monsterName: "Swamp Battleguard",
   portrait: `/MonsterPortraits/Swamp Battleguard.png`,
   class: "Warrior",
@@ -4054,10 +4080,10 @@ export const Monsters = [
   ability3UnlockLvl: 20,
   ability3: "Castle Adept",
   hex: "808000",
-  id: 58
+  id: 57
 },
 {
-  "": 156,
+  "": 157,
   monsterName: "Swordsman from a Foreign Land",
   portrait: `/MonsterPortraits/Swordsman from a Foreign Land.png`,
   class: "Warrior",
@@ -4083,7 +4109,7 @@ export const Monsters = [
   id: 68
 },
 {
-  "": 157,
+  "": 158,
   monsterName: "Swordstalker",
   portrait: `/MonsterPortraits/Swordstalker.png`,
   class: "Warrior",
@@ -4106,33 +4132,7 @@ export const Monsters = [
   ability3UnlockLvl: 25,
   ability3: "Berserker Soul",
   hex: "280315",
-  id: 55
-},
-{
-  "": 158,
-  monsterName: "Tao the Chanter",
-  portrait: `/MonsterPortraits/Tao the Chanter.png`,
-  class: "Spellcaster",
-  hp: 700,
-  atk: 1200,
-  def: 900,
-  ap: 2,
-  gt: 2,
-  luck: 7,
-  speed: 95,
-  attackEffectUnlockLvl: 1,
-  attackEffect: "AP-Drain 2",
-  specialUnlockLvl: 1,
-  specialName: "Forbidden Elements Spell",
-  specialEffect: "All enemies lose 1 AP",
-  ability1UnlockLvl: 97,
-  ability1: "Control Magic",
-  ability2UnlockLvl: 98,
-  ability2: "Offensive Magic",
-  ability3UnlockLvl: 99,
-  ability3: "Defensive Magic",
-  hex: "6020F3",
-  id: 46
+  id: 54
 },
 {
   "": 159,
@@ -4418,7 +4418,7 @@ export const Monsters = [
   ability3UnlockLvl: -1,
   ability3: "No Effect",
   hex: "0241FF",
-  id: 48
+  id: 47
 },
 {
   "": 170,
@@ -4496,7 +4496,7 @@ export const Monsters = [
   ability3UnlockLvl: 15,
   ability3: "Armor",
   hex: "0078C8",
-  id: 64
+  id: 63
 },
 {
   "": 173,
