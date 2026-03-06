@@ -196,7 +196,7 @@ function ResultCard({ monster, tDiff, cardRGB, rv, gv, bv, rVals, gVals, bVals }
                 <div className="orb-field r-value"><span>R Diff:</span> <span>{rv}</span></div>
                 <div className="orb-field g-value"><span>G Diff:</span> <span>{gv}</span></div>
                 <div className="orb-field b-value"><span>B Diff:</span> <span>{bv}</span></div>
-                <div className="orb-field total-value" style={{ gridColumn: 'span 3' }}><span>Battles to Sync:</span> <span>{battles}</span></div>
+                <div className="orb-field total-value" style={{ gridColumn: 'span 3' }}><span>Battles to Fully Sync:</span> <span>{battles}</span></div>
             </div>
         </div>
     );
