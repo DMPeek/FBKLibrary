@@ -381,7 +381,7 @@ export default function Compare() {
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-        <h2 style={{marginBottom: '24px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting.</h2>
+        <h2 style={{marginBottom: '24px', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting. Highest numbers for HP, ATK, DEF, and AP for the monsters will be highlighted <span style={{color:'#39ff14'}}>GREEN</span> while lower numbers are <span style={{color:'#ff3b3b'}}>RED</span></h2>
         <button
           onClick={() => {
             setSearch1('');
