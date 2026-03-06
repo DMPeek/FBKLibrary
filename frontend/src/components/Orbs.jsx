@@ -327,7 +327,7 @@ export default function Orbs() {
                 </nav>
             </header>
             <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-                <h2 style={{marginBottom: '24px'}}>Looks up RGB values of orbs to return top 15 mons or marshalls with the closest orb colors to your selection</h2>
+                <h2 style={{marginBottom: '24px', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>Looks up RGB values of orbs to return top 15 mons or marshalls with the closest orb colors to your selection. "Team to Marshall" uses a team of 3 monsters to find the 15 closest marshall orbs to that team's orbs.</h2>
                 <div className="mode-selector-buttons" style={{ display: 'flex', gap: '12px', marginBottom: '24px', justifyContent: 'center' }}>
                     <button
                         className={`mode-button ${comparisonMode === 0 ? 'active' : ''}`}
