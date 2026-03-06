@@ -2155,7 +2155,7 @@ export const Monsters = [
   ability2: "Slime Reborn",
   ability3UnlockLvl: 25,
   ability3: "Super Stamina",
-  hex: "A0A000",
+  hex: "80D2B4",
   id: 98
 },
 {
@@ -3325,7 +3325,7 @@ export const Monsters = [
   ability2: "Control Magic",
   ability3UnlockLvl: 10,
   ability3: "Swift",
-  hex: "00189D",
+  hex: "F46BA6",
   id: 65
 },
 {
