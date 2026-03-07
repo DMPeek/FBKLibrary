@@ -94,7 +94,7 @@ function MonsterCard({ monster, level, onLevelChange, statCompare }) {
         <div className="monster-field"><span>Speed:</span> <span>{displayValue(monster.speed)}</span></div>
       </div>
       <div className="monster-field"><span>Battle Arts Effect:</span> <span>{displayValue(monster.attackEffect)} ({displayValue(monster.attackEffectUnlockLvl)})</span></div>
-      <div className="monster-field"><span>Special Name:</span> <span>{displayValue(monster.specialName)}</span></div>
+      <div className="monster-field"><span>Special Name:</span> <span>{displayValue(monster.specialName)} ({displayValue(monster.specialUnlockLvl)})</span></div>
       <div className="monster-field"><span>Special Description:</span> <span>{displayValue(monster.specialEffect)}</span></div>
       <div className="monster-field"><span>Ability 1:</span> <span>{displayValue(monster.ability1)} ({displayValue(monster.ability1UnlockLvl)})</span></div>
       <div className="monster-field"><span>Ability 2:</span> <span>{displayValue(monster.ability2)} ({displayValue(monster.ability2UnlockLvl)})</span></div>
