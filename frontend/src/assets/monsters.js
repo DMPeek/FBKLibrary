@@ -2198,7 +2198,7 @@ export const Monsters = [
   speed: 130,
   attackEffectUnlockLvl: 30,
   attackEffect: "Paralysis",
-  specialUnlockLvl: 35,
+  specialUnlockLvl: 40,
   specialName: "Eye of Bewilderment",
   specialEffect: "Reduce all the enemies attack by 1000",
   ability1UnlockLvl: 1,
