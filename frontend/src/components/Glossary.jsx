@@ -2,32 +2,32 @@ import '../styles.css';
 
 const glossaryEntries = [
     {
-        term: 'Class',
-        definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
-    },
-    {
-        term: 'HP/Hit Points',
-        definition: 'The health value of the monster. Once this number reaches 0, the monster is eliminated until revival or mission clear',
+        term: 'AP/Action Points',
+        definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard',
     },
     {
         term: 'ATK/Attack',
         definition: 'The attack value of the monster. This determines how much damage the monster will do with attacks. The formula divides the monsters attack by 100 and adds some level of random variation.',
     },
     {
-        term: 'DEF/Defense',
-        definition: 'The defense value of the monster. This value is only used when guarding and requires an opponent to beat this number with their attack value to break the guard.',
+        term: 'Class',
+        definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
     },
     {
-        term: 'Luck',
-        definition: 'Determines a monsters accuracy, chance to dodge, and critical chance. Value is quadrupled when guarding.',
+        term: 'DEF/Defense',
+        definition: 'The defense value of the monster. This value is only used when guarding and requires an opponent to beat this number with their attack value to break the guard.',
     },
     {
         term: 'GT/Growth Tree',
         definition: 'This determines how the stats of a monster increase with each level up. This values changes at certain level thresholds within the specific growth tree.',
     },
     {
-        term: 'AP/Action Points',
-        definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard',
+        term: 'HP/Hit Points',
+        definition: 'The health value of the monster. Once this number reaches 0, the monster is eliminated until revival or mission clear',
+    },
+    {
+        term: 'Luck',
+        definition: 'Determines a monsters accuracy, chance to dodge, and critical chance. Value is quadrupled when guarding.',
     },
     {
         term: 'Speed',
