@@ -26,6 +26,10 @@ const glossaryEntries = [
         definition: 'The attack value of the monster. This determines how much damage the monster will do with attacks. The formula divides the monsters attack by 100 and adds some level of random variation.',
     },
     {
+        term: 'Bases/Towns/Forts/Castles',
+        definition: 'Key locations on the overworld maps that marshalls capture or defend. Equipment can be built at these locations.',
+    },
+    {
         term: 'Barricade',
         definition: 'Equipment that boosts the stats of monsters within a base.',
     },
