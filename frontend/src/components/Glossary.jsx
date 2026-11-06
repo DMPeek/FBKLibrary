@@ -34,12 +34,28 @@ const glossaryEntries = [
         definition: 'Equipment that boosts the stats of monsters within a base.',
     },
     {
+        term: 'Barrier A',
+        definition: 'Positive status effect that lowers the Attack, Defense, and increases the Speed of the enemy monster that attacks the affected monster.',
+    },
+    {
+        term: 'Barrier B',
+        definition: 'Positive status effect that deals damage to the enemy monster with damage based on the Attack stat of the affected monster.',
+    },
+    {
+        term: 'Barrier C',
+        definition: 'Positive status effect that reduces the damage of non-combo special attacks that hit the affected monster by 50%.',
+    },
+    {
         term: 'Battle Arts Effect',
         definition: 'This determines any added effects to a monsters Basic Attack (A button attacks); such as status effects or bonus damage to specific monster classes.',
     },
     {
         term: 'Berserker Soul',
         definition: 'Boosts the Attack stat of the monster with this ability by 2000 but applies the confusion status effect to the monster.',
+    },
+    {
+        term: 'Blind',
+        definition: 'Negative status effect that increases the chance the afflicted monster will miss a non-combo special attack.',
     },
     {
         term: 'Bulwark',
@@ -56,6 +72,10 @@ const glossaryEntries = [
     {
         term: 'Class-Killer Abilities',
         definition: 'Augments only basic attacks to deal more damage to specific monster classes. e.g. Machine-Killer, Dragon-Killer, Spellcaster-Killer, etc etc.',
+    },
+    {
+        term: 'Confusion',
+        definition: 'Negative status effect that restricts the afflicted monster into only using basic attacks.',
     },
     {
         term: 'Control Magic',
@@ -110,6 +130,14 @@ const glossaryEntries = [
         definition: 'A monster ability that allows for use of the offensive school of magic.',
     },
     {
+        term: 'Paralyze',
+        definition: 'Negative status effect that prevents the afflicted monster from taking an action.',
+    },
+    {
+        term: 'Poison',
+        definition: 'Negative status effect that deals damage to the afflicted monster on each of their turns. Poison strength changes based on what applied the status.',
+    },
+    {
         term: 'Resupply',
         definition: 'Equipment that allows you to refresh item uses for your monsters at the cost of gold.',
     },
@@ -130,8 +158,12 @@ const glossaryEntries = [
         definition: 'A monster ability that prevents any negative status effects from afflicting the monster with this ability.',
     },
     {
-        term: 'Super Stamina',
-        definition: 'A monster ability that applies a health regeneration status effect to the monster with this ability at the start of a battle.',
+        term: 'Super Stamina (Ability)',
+        definition: 'A monster ability that applies the Super Stamina status effect to the monster with this ability at the start of a battle.',
+    },
+    {
+        term: 'Super Stamina (Status)',
+        definition: 'Positive status effect that heals the affected monster on each of their turns.',
     },
     {
         term: 'Swift',
@@ -140,6 +172,10 @@ const glossaryEntries = [
     {
         term: 'Trade Union',
         definition: 'Equipment that unlocks the use of the trader in a base to buy items.',
+    },
+    {
+        term: 'Undodgeable',
+        definition: 'Augments only basic attacks to never miss their target.',
     },
     {
         term: 'Watchtower',
