@@ -2,20 +2,60 @@ import '../styles.css';
 
 const glossaryEntries = [
     {
+        term: 'Abilities',
+        definition: 'The passives monsters get; either in or out of combat. Each monster can have up to 3 abilities.',
+    },
+    {
+        term: 'Adept',
+        definition: 'Monster abilities that boosts the stats of a monster on their respective adept battlefields. e.g. Castle-Adept, Water-Adept, Field-Adept, Night-Adept, etc etc.',
+    },
+    {
         term: 'AP/Action Points',
-        definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard',
+        definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard.',
+    },
+    {
+        term: 'Armor',
+        definition: 'Reduces damage taken by the enemy monster basic attacks and special attacks by 20%.',
+    },
+    {
+        term: 'Astral Barrier',
+        definition: 'Randomly assigns one of the three barrier status effects (A,B, or C) to the monster with this ability at the start of a battle.',
     },
     {
         term: 'ATK/Attack',
         definition: 'The attack value of the monster. This determines how much damage the monster will do with attacks. The formula divides the monsters attack by 100 and adds some level of random variation.',
     },
     {
+        term: 'Battle Arts Effect',
+        definition: 'This determines any added effects to a monsters Basic Attack (A button attacks); such as status effects or bonus damage to specific monster classes.',
+    },
+    {
+        term: 'Berserker Soul',
+        definition: 'Boosts the Attack stat of the monster with this ability by 2000 but applies the confusion status effect to the monster.',
+    },
+    {
+        term: 'Bulwark',
+        definition: 'Doubles the Defense stat of the monster with this ability.',
+    },
+    {
         term: 'Class',
         definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
     },
     {
+        term: 'Control Magic',
+        definition: 'A monster ability that allows for use of the control school of magic.',
+    },
+    {
         term: 'DEF/Defense',
         definition: 'The defense value of the monster. This value is only used when guarding and requires an opponent to beat this number with their attack value to break the guard.',
+    },
+    {
+        term: 'Defensive Magic',
+        definition: 'A monster ability that allows for use of the defensive school of magic.',
+    },
+    {
+        term: 'Durable',
+        definition: 'A monster ability that boosts the Hit Points of a monster by 250.',
     },
     {
         term: 'GT/Growth Tree',
@@ -30,8 +70,36 @@ const glossaryEntries = [
         definition: 'Determines a monsters accuracy, chance to dodge, and critical chance. Value is quadrupled when guarding.',
     },
     {
+        term: 'Lucky',
+        definition: 'A monster ability that boosts the luck of a monster by 10.',
+    },
+    {
+        term: 'Offensive Magic',
+        definition: 'A monster ability that allows for use of the offensive school of magic.',
+    },
+    {
+        term: 'Specials',
+        definition: 'Monster attacks or support abilities used by pressing the Z button in combat. Costs 2 AP.',
+    },
+    {
         term: 'Speed',
         definition: 'This decides the turn order of monsters. Every monster gets one action before the next turn begins. The lower the speed of a monster, the faster they act. This value has some slight variation; so turn order has some level of control, but not total control.',
+    },
+    {
+        term: 'Status Effects',
+        definition: 'Positive or negative effects given to a monster that have a chance to be removed each turn.',
+    },
+    {
+        term: 'Status Guard',
+        definition: 'A monster ability that prevents any negative status effects from afflicting the monster with this ability.',
+    },
+    {
+        term: 'Super Stamina',
+        definition: 'A monster ability that applies a health regeneration status effect to the monster with this ability at the start of a battle.',
+    },
+    {
+        term: 'Swift',
+        definition: 'Increases the overworld speed of a monster by one stage. Also decreases the battle speed of a monster by 20 in combat.',
     },
 ];
 
