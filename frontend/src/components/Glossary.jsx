@@ -43,7 +43,7 @@ const glossaryEntries = [
     },
     {
         term: 'Class-Killer Abilities',
-        definition: 'Augment basic attacks to deal more damage to specific monster classes. e.g. Machine-Killer, Dragon-Killer, Spellcaster-Killer, etc etc.',
+        definition: 'Augments only basic attacks to deal more damage to specific monster classes. e.g. Machine-Killer, Dragon-Killer, Spellcaster-Killer, etc etc.',
     },
     {
         term: 'Control Magic',
