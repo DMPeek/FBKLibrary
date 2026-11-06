@@ -26,6 +26,10 @@ const glossaryEntries = [
         definition: 'The attack value of the monster. This determines how much damage the monster will do with attacks. The formula divides the monsters attack by 100 and adds some level of random variation.',
     },
     {
+        term: 'Barricade',
+        definition: 'Equipment that boosts the stats of monsters within a base.',
+    },
+    {
         term: 'Battle Arts Effect',
         definition: 'This determines any added effects to a monsters Basic Attack (A button attacks); such as status effects or bonus damage to specific monster classes.',
     },
@@ -36,6 +40,10 @@ const glossaryEntries = [
     {
         term: 'Bulwark',
         definition: 'Doubles the Defense stat of the monster with this ability.',
+    },
+    {
+        term: 'Cannons',
+        definition: 'Equipment that can be built at a base that will attack either Walking or Flying foes based on what kind of cannon is built; Anti-Ground or Anti Air cannons, respectively.',
     },
     {
         term: 'Class',
@@ -62,12 +70,24 @@ const glossaryEntries = [
         definition: 'A monster ability that boosts the Hit Points of a monster by 250.',
     },
     {
+        term: 'Equipment',
+        definition: 'Gear that can be built onto a base in the overworld to assist the player or enemy with stats, healing, or defensive cannons',
+    },
+    {
         term: 'GT/Growth Tree',
         definition: 'This determines how the stats of a monster increase with each level up. This values changes at certain level thresholds within the specific growth tree.',
     },
     {
+        term: 'Healer',
+        definition: 'Equipment that boosts the passive healing amount that a monster receives when in a base.',
+    },
+    {
         term: 'HP/Hit Points',
         definition: 'The health value of the monster. Once this number reaches 0, the monster is eliminated until revival or mission clear',
+    },
+    {
+        term: 'Items',
+        definition: 'Consumables that a monster can bring into combat for healing or other various effects. Items can also be permanent stat boosts instead of a consumable; such as Legendary Sword.',
     },
     {
         term: 'Luck',
@@ -78,8 +98,16 @@ const glossaryEntries = [
         definition: 'A monster ability that boosts the luck of a monster by 10.',
     },
     {
+        term: 'Movement Type',
+        definition: 'Determines whether a leading monster for a marshall team will be Walking (W), Flying (F), or Swimming (S)',
+    },
+    {
         term: 'Offensive Magic',
         definition: 'A monster ability that allows for use of the offensive school of magic.',
+    },
+    {
+        term: 'Resupply',
+        definition: 'Equipment that allows you to refresh item uses for your monsters at the cost of gold.',
     },
     {
         term: 'Specials',
@@ -104,6 +132,14 @@ const glossaryEntries = [
     {
         term: 'Swift',
         definition: 'Increases the overworld speed of a monster by one stage. Also decreases the battle speed of a monster by 20 in combat.',
+    },
+    {
+        term: 'Trade Union',
+        definition: 'Equipment that unlocks the use of the trader in a base to buy items.',
+    },
+    {
+        term: 'Watchtower',
+        definition: 'Equipment that doubles the effective range of cannons built at a base.',
     },
 ];
 
