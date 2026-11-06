@@ -42,6 +42,10 @@ const glossaryEntries = [
         definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
     },
     {
+        term: 'Class-Killer Abilities',
+        definition: 'Augment basic attacks to deal more damage to specific monster classes. e.g. Machine-Killer, Dragon-Killer, Spellcaster-Killer, etc etc.',
+    },
+    {
         term: 'Control Magic',
         definition: 'A monster ability that allows for use of the control school of magic.',
     },
