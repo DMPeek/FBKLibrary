@@ -78,6 +78,10 @@ const glossaryEntries = [
         definition: 'Negative status effect that restricts the afflicted monster into only using basic attacks.',
     },
     {
+        term: 'Constructor',
+        definition: 'Marshall ability that reduces the cost of building equipment by 25%.',
+    },
+    {
         term: 'Control Magic',
         definition: 'A monster ability that allows for use of the control school of magic.',
     },
@@ -88,6 +92,10 @@ const glossaryEntries = [
     {
         term: 'Defensive Magic',
         definition: 'A monster ability that allows for use of the defensive school of magic.',
+    },
+    {
+        term: 'Discount',
+        definition: 'Marshall ability that lowers the price of items in shops by 25%.',
     },
     {
         term: 'Durable',
@@ -102,8 +110,12 @@ const glossaryEntries = [
         definition: 'This determines how the stats of a monster increase with each level up. This values changes at certain level thresholds within the specific growth tree.',
     },
     {
-        term: 'Healer',
+        term: 'Healer (Equipment)',
         definition: 'Equipment that boosts the passive healing amount that a monster receives when in a base.',
+    },
+    {
+        term: 'Healer (Marshall Ability)',
+        definition: 'Marshall ability that doubles the healing amount of passive healing in bases for ONLY the monsters assigned to the Healer Marshall.',
     },
     {
         term: 'HP/Hit Points',
@@ -122,8 +134,20 @@ const glossaryEntries = [
         definition: 'A monster ability that boosts the luck of a monster by 10.',
     },
     {
+        term: 'Marshall',
+        definition: 'Leaders who command the monsters deployed in combat. Sometimes have their own abilities.',
+    },
+    {
+        term: 'Master of the Egyptian Gods',
+        definition: 'Marshall ability that permits the use of items that summon the Egyptian Gods.',
+    },
+    {
         term: 'Movement Type',
         definition: 'Determines whether a leading monster for a marshall team will be Walking (W), Flying (F), or Swimming (S)',
+    },
+    {
+        term: 'Navy',
+        definition: 'Marshall Ability that boosts the overworld speed of Swimming type monsters by one stage.',
     },
     {
         term: 'Offensive Magic',
