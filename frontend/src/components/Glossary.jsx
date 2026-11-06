@@ -147,7 +147,7 @@ const glossaryEntries = [
     },
     {
         term: 'Navy',
-        definition: 'Marshall Ability that boosts the overworld speed of Swimming type monsters by one stage.',
+        definition: 'Marshall ability that boosts the overworld speed of Swimming type monsters by one stage.',
     },
     {
         term: 'Offensive Magic',
