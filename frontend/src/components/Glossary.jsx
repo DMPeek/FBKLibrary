@@ -63,7 +63,7 @@ const glossaryEntries = [
     },
     {
         term: 'Cannons',
-        definition: 'Equipment that can be built at a base that will attack either Walking or Flying foes based on what kind of cannon is built; Anti-Ground or Anti Air cannons, respectively.',
+        definition: 'Equipment that can be built at a base that will attack either Walking or Flying foes based on what kind of cannon is built; Anti-Ground or Anti-Air cannons, respectively.',
     },
     {
         term: 'Class',
