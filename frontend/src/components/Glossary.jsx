@@ -46,6 +46,10 @@ const glossaryEntries = [
         definition: 'This determines any added effects to a monsters Basic Attack (A button attacks); such as status effects or bonus damage to specific monster classes.',
     },
     {
+        term: 'Beast-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Beast monster class.',
+    },
+    {
         term: 'Berserker Soul',
         definition: 'Boosts the Attack stat of the monster with this ability by 1000 but applies the confusion status effect to the monster.',
     },
@@ -68,10 +72,6 @@ const glossaryEntries = [
     {
         term: 'Class',
         definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
-    },
-    {
-        term: 'Class-Killer Abilities',
-        definition: 'Augments only basic attacks to deal more damage to specific monster classes. e.g. Machine-Killer, Dragon-Killer, Spellcaster-Killer, etc etc.',
     },
     {
         term: 'Confusion',
@@ -102,6 +102,10 @@ const glossaryEntries = [
         definition: 'A monster ability that allows a monster to drain the item uses of the enemy monster. If guarding before attacking, boosts drain chance to 100%.',
     },
     {
+        term: 'Dragon-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Dragon monster class.',
+    },
+    {
         term: 'Durable',
         definition: 'A monster ability that boosts the Hit Points of a monster by 250.',
     },
@@ -112,6 +116,10 @@ const glossaryEntries = [
     {
         term: 'Field-Adept',
         definition: 'A monster ability that boosts monster stats in Field battlefields. Boosted stats: Atk+1000, DEF+1000.',
+    },
+    {
+        term: 'Fiend-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Fiend monster class.',
     },
     {
         term: 'Forest-Adept',
@@ -144,6 +152,10 @@ const glossaryEntries = [
     {
         term: 'Lucky',
         definition: 'A monster ability that boosts the luck of a monster by 10.',
+    },
+    {
+        term: 'Machine-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Machine monster class.',
     },
     {
         term: 'Marshall',
@@ -202,6 +214,14 @@ const glossaryEntries = [
         definition: 'This decides the turn order of monsters. Every monster gets one action before the next turn begins. The lower the speed of a monster, the faster they act. This value has some slight variation; so turn order has some level of control, but not total control.',
     },
     {
+        term: 'Spellcaster-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Spellcaster monster class.',
+    },
+    {
+        term: 'Spirit-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Spirit monster class.',
+    },
+    {
         term: 'Status Effects',
         definition: 'Positive or negative effects given to a monster that have a chance to be removed each turn.',
     },
@@ -230,12 +250,16 @@ const glossaryEntries = [
         definition: 'Augments only basic attacks to never miss their target.',
     },
     {
-        term: 'Water-Adept',
-        definition: 'A monster ability that boosts monster stats in Water battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-30.',
+        term: 'Warrior-Killer',
+        definition: 'Augments only basic attacks to deal more damage to the Warrior monster class.',
     },
     {
         term: 'Wasteland-Adept',
         definition: 'A monster ability that boosts monster stats in Wasteland battlefields. Boosted stats: AP+2, Luck+5',
+    },
+    {
+        term: 'Water-Adept',
+        definition: 'A monster ability that boosts monster stats in Water battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-30.',
     },
     {
         term: 'Watchtower',
