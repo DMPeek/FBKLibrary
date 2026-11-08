@@ -6,10 +6,6 @@ const glossaryEntries = [
         definition: 'The passives monsters get; either in or out of combat. Each monster can have up to 3 abilities.',
     },
     {
-        term: 'Adept',
-        definition: 'Monster abilities that boosts the stats of a monster on their respective adept battlefields. e.g. Castle-Adept, Water-Adept, Field-Adept, Night-Adept, etc etc.',
-    },
-    {
         term: 'AP/Action Points',
         definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard.',
     },
@@ -66,6 +62,10 @@ const glossaryEntries = [
         definition: 'Equipment that can be built at a base that will attack either Walking or Flying foes based on what kind of cannon is built; Anti-Ground or Anti-Air cannons, respectively.',
     },
     {
+        term: 'Castle-Adept',
+        definition: 'A monster ability that boosts monster stats in Castle battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-10.',
+    },
+    {
         term: 'Class',
         definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
     },
@@ -106,6 +106,14 @@ const glossaryEntries = [
         definition: 'Gear that can be built onto a base in the overworld to assist the player or enemy with stats, healing, or defensive cannons',
     },
     {
+        term: 'Field-Adept',
+        definition: 'A monster ability that boosts monster stats in Field battlefields. Boosted stats: Atk+1000, DEF+1000.',
+    },
+    {
+        term: 'Forest-Adept',
+        definition: 'A monster ability that boosts monster stats in Forest battlefields. Boosted stats: Atk+500, DEF+500, Speed-10, Luck+10.',
+    },
+    {
         term: 'GT/Growth Tree',
         definition: 'This determines how the stats of a monster increase with each level up. This values changes at certain level thresholds within the specific growth tree.',
     },
@@ -142,12 +150,20 @@ const glossaryEntries = [
         definition: 'Marshall ability that permits the use of items that summon the Egyptian Gods.',
     },
     {
+        term: 'Mountain-Adept',
+        definition: 'A monster ability that boosts monster stats in Mountain battlefields. Boosted stats: Atk+500, DEF+500, Speed-50.',
+    },
+    {
         term: 'Movement Type',
         definition: 'Determines whether a leading monster for a marshall team will be Walking (W), Flying (F), or Swimming (S)',
     },
     {
         term: 'Navy',
         definition: 'Marshall ability that boosts the overworld speed of Swimming type monsters by one stage.',
+    },
+    {
+        term: 'Night-Adept',
+        definition: 'A monster ability that boosts monster stats during Nighttime. Stacks with other adepts. Boosted stats: Atk+250, DEF+250, AP+1, Luck+5.',
     },
     {
         term: 'Offensive Magic',
@@ -164,6 +180,10 @@ const glossaryEntries = [
     {
         term: 'Resupply',
         definition: 'Equipment that allows you to refresh item uses for your monsters at the cost of gold.',
+    },
+    {
+        term: 'Solar-Adept',
+        definition: 'A monster ability that boosts monster stats during Nighttime. Stacks with other adepts. Boosted stats: Atk+250, DEF+250, AP+1, Luck+5.',
     },
     {
         term: 'Specials',
@@ -200,6 +220,14 @@ const glossaryEntries = [
     {
         term: 'Undodgeable',
         definition: 'Augments only basic attacks to never miss their target.',
+    },
+    {
+        term: 'Water-Adept',
+        definition: 'A monster ability that boosts monster stats in Water battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-30.',
+    },
+    {
+        term: 'Wasteland-Adept',
+        definition: 'A monster ability that boosts monster stats in Wasteland battlefields. Boosted stats: AP+2, Luck+5',
     },
     {
         term: 'Watchtower',
