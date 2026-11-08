@@ -10,12 +10,12 @@ const glossaryEntries = [
         definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard.',
     },
     {
-        id: 'Armor',
+        id: 'armor',
         term: 'Armor',
         definition: 'A monster ability that reduces damage taken by the enemy monster basic attacks and special attacks by 20%.',
     },
     {
-        id: 'Astral Barrier',
+        id: 'astral-barrier',
         term: 'Astral Barrier',
         definition: 'A monster ability Randomly assigns one of the three barrier status effects (A,B, or C) to the monster with this ability at the start of a battle.',
     },
@@ -48,13 +48,13 @@ const glossaryEntries = [
         definition: 'This determines any added effects to a monsters Basic Attack (A button attacks); such as status effects or bonus damage to specific monster classes.',
     },
     {
-        id: 'Beast-Killer',
+        id: 'beast-killer',
         aliases: ['Beast-Killer 2'],
         term: 'Beast-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Beast monster class.',
     },
     {
-        id: 'Berserker Soul',
+        id: 'berserker-soul',
         term: 'Berserker Soul',
         definition: 'A monster ability that boosts the Attack stat of the monster with this ability by 1000 but applies the confusion status effect to the monster.',
     },
@@ -63,7 +63,7 @@ const glossaryEntries = [
         definition: 'Negative status effect that increases the chance the afflicted monster will miss a non-combo special attack.',
     },
     {
-        id: 'Bulwark',
+        id: 'dulwark',
         term: 'Bulwark',
         definition: 'A monster ability that doubles the Defense stat of the monster with this ability.',
     },
@@ -72,7 +72,7 @@ const glossaryEntries = [
         definition: 'Equipment that can be built at a base that will attack either Walking or Flying foes based on what kind of cannon is built; Anti-Ground or Anti-Air cannons, respectively.',
     },
     {
-        id: 'Castle-Adept',
+        id: 'castle-adept',
         term: 'Castle-Adept',
         definition: 'A monster ability that boosts monster stats in Castle battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-10.',
     },
@@ -89,7 +89,7 @@ const glossaryEntries = [
         definition: 'Marshall ability that reduces the cost of building equipment by 25%.',
     },
     {
-        id: 'Control Magic',
+        id: 'control-magic',
         term: 'Control Magic',
         definition: 'A monster ability that allows for use of the control school of magic.',
     },
@@ -98,7 +98,7 @@ const glossaryEntries = [
         definition: 'The defense value of the monster. This value is only used when guarding and requires an opponent to beat this number with their attack value to break the guard.',
     },
     {
-        id: 'Defensive Magic',
+        id: 'defensive-magic',
         term: 'Defensive Magic',
         definition: 'A monster ability that allows for use of the defensive school of magic.',
     },
@@ -107,18 +107,18 @@ const glossaryEntries = [
         definition: 'Marshall ability that lowers the price of items in shops by 25%.',
     },
     {
-        id: 'Drain Touch',
+        id: 'drain-touch',
         term: 'Drain Touch',
         definition: 'Augments only basic attacks to allow a monster to take away the item uses of the enemy monster, starting from top item in the inventory to the bottom. If guarding before attacking, boosts drain chance to 100%.',
     },
     {
-        id: 'Dragon-Killer',
+        id: 'dragon-killer',
         aliases: ['Dragon-Killer 2'],
         term: 'Dragon-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Dragon monster class.',
     },
     {
-        id: 'Durable',
+        id: 'durable',
         term: 'Durable',
         definition: 'A monster ability that boosts the Hit Points of a monster by 250.',
     },
@@ -127,18 +127,18 @@ const glossaryEntries = [
         definition: 'Gear that can be built onto a base in the overworld to assist the player or enemy with stats, healing, or defensive cannons',
     },
     {
-        id: 'Field-Adept',
+        id: 'field-adept',
         term: 'Field-Adept',
         definition: 'A monster ability that boosts monster stats in Field battlefields. Boosted stats: Atk+1000, DEF+1000.',
     },
     {
-        id: 'Fiend-Killer',
+        id: 'fiend-killer',
         aliases: ['Fiend-Killer 2'],
         term: 'Fiend-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Fiend monster class.',
     },
     {
-        id: 'Forest-Adept',
+        id: 'forest-adept',
         term: 'Forest-Adept',
         definition: 'A monster ability that boosts monster stats in Forest battlefields. Boosted stats: Atk+500, DEF+500, Speed-10, Luck+10.',
     },
@@ -167,12 +167,12 @@ const glossaryEntries = [
         definition: 'Determines a monsters accuracy, chance to dodge, and critical chance. Value is quadrupled when guarding.',
     },
     {
-        id: 'Lucky',
+        id: 'lucky',
         term: 'Lucky',
         definition: 'A monster ability that boosts the luck of a monster by 10.',
     },
     {
-        id: 'Machine-Killer',
+        id: 'machine-killer',
         aliases: ['Machine-Killer 2'],
         term: 'Machine-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Machine monster class.',
@@ -186,7 +186,7 @@ const glossaryEntries = [
         definition: 'Marshall ability that permits the use of items that summon the Egyptian Gods.',
     },
     {
-        id: 'Mountain-Adept',
+        id: 'mountain-adept',
         term: 'Mountain-Adept',
         definition: 'A monster ability that boosts monster stats in Mountain battlefields. Boosted stats: Atk+500, DEF+500, Speed-50.',
     },
@@ -199,12 +199,12 @@ const glossaryEntries = [
         definition: 'Marshall ability that boosts the overworld speed of Swimming type monsters by one stage.',
     },
     {
-        id: 'Night-Adept',
+        id: 'night-adept',
         term: 'Night-Adept',
         definition: 'A monster ability that boosts monster stats during Nighttime. Stacks with other adepts. Boosted stats: Atk+250, DEF+250, AP+1, Luck+5.',
     },
     {
-        id: 'Offensive Magic',
+        id: 'offensive-magic',
         term: 'Offensive Magic',
         definition: 'A monster ability that allows for use of the offensive school of magic.',
     },
@@ -221,12 +221,12 @@ const glossaryEntries = [
         definition: 'Equipment that allows you to refresh item uses for your monsters at the cost of gold.',
     },
     {
-        id: 'Slime Reborn',
+        id: 'slime-reborn',
         term: 'Slime Reborn',
         definition: 'A monster ability that allows a monster to revive itself once per mission upon death.',
     },
     {
-        id: 'Solar-Adept',
+        id: 'solar-adept',
         term: 'Solar-Adept',
         definition: 'A monster ability that boosts monster stats during Nighttime. Stacks with other adepts. Boosted stats: Atk+250, DEF+250, AP+1, Luck+5.',
     },
@@ -235,18 +235,18 @@ const glossaryEntries = [
         definition: 'Monster attacks or support abilities used by pressing the Z button in combat. Costs 2 AP.',
     },
     {
-        id: 'Speed',
+        id: 'speed',
         term: 'Speed',
         definition: 'This decides the turn order of monsters. Every monster gets one action before the next turn begins. The lower the speed of a monster, the faster they act. This value has some slight variation; so turn order has some level of control, but not total control.',
     },
     {
-        id: 'Spellcaster-Killer',
+        id: 'spellcaster-killer',
         aliases: ['Spellcaster-Killer 2'],
         term: 'Spellcaster-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Spellcaster monster class.',
     },
     {
-        id: 'Spirit-Killer',
+        id: 'spirit-killer',
         aliases: ['Spirit-Killer 2'],
         term: 'Spirit-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Spirit monster class.',
@@ -256,7 +256,7 @@ const glossaryEntries = [
         definition: 'Positive or negative effects given to a monster that have a chance to be removed each turn.',
     },
     {
-        id: 'Status Guard',
+        id: 'status-guard',
         term: 'Status Guard',
         definition: 'A monster ability that prevents any negative status effects from afflicting the monster with this ability.',
     },
@@ -271,7 +271,7 @@ const glossaryEntries = [
         definition: 'Positive status effect that heals the affected monster on each of their turns.',
     },
     {
-        id: 'Swift',
+        id: 'swift',
         term: 'Swift',
         definition: 'A monster ability that increases the overworld speed of a monster by one stage. Also decreases the battle speed of a monster by 20 in combat.',
     },
@@ -284,18 +284,18 @@ const glossaryEntries = [
         definition: 'Augments only basic attacks to never miss their target.',
     },
     {
-        id: 'Warrior-Killer',
+        id: 'warrior-killer',
         aliases: ['Warrior-Killer 2'],
         term: 'Warrior-Killer',
         definition: 'Augments only basic attacks to deal more damage to the Warrior monster class.',
     },
     {
-        id: 'Wasteland-Adept',
+        id: 'wasteland-adept',
         term: 'Wasteland-Adept',
         definition: 'A monster ability that boosts monster stats in Wasteland battlefields. Boosted stats: AP+2, Luck+5',
     },
     {
-        id: 'Water-Adept',
+        id: 'water-adept',
         term: 'Water-Adept',
         definition: 'A monster ability that boosts monster stats in Water battlefields. Boosted stats: Atk+500, DEF+500, AP+1, Speed-30.',
     },
