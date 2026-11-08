@@ -1,3 +1,5 @@
+// hardcoded database for glossary entries and dynamic mapping for the links in the monster cards
+
 export const glossaryEntries = [
     {
         term: 'Abilities',
