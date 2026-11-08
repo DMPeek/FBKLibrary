@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
 import '../styles.css';
 import { Monsters } from '../assets/monsters';
+import { glossaryEntries } from '../assets/glossary';
 import { calc, hpCalc, atkDefCalc, apCalc } from '../utils/lvl_calc';
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale, Legend } from 'chart.js';
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale, Legend);
