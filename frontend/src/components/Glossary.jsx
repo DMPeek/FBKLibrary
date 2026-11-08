@@ -47,7 +47,7 @@ const glossaryEntries = [
     },
     {
         term: 'Berserker Soul',
-        definition: 'Boosts the Attack stat of the monster with this ability by 2000 but applies the confusion status effect to the monster.',
+        definition: 'Boosts the Attack stat of the monster with this ability by 1000 but applies the confusion status effect to the monster.',
     },
     {
         term: 'Blind',
@@ -96,6 +96,10 @@ const glossaryEntries = [
     {
         term: 'Discount',
         definition: 'Marshall ability that lowers the price of items in shops by 25%.',
+    },
+    {
+        term: 'Drain Touch',
+        definition: 'A monster ability that allows a monster to drain the item uses of the enemy monster. If guarding before attacking, boosts drain chance to 100%.',
     },
     {
         term: 'Durable',
@@ -180,6 +184,10 @@ const glossaryEntries = [
     {
         term: 'Resupply',
         definition: 'Equipment that allows you to refresh item uses for your monsters at the cost of gold.',
+    },
+    {
+        term: 'Slime Reborn',
+        definition: 'A monster ability that allows a monster to revive itself once per mission upon death.',
     },
     {
         term: 'Solar-Adept',
