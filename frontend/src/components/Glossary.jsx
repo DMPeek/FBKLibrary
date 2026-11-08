@@ -35,7 +35,7 @@ const glossaryEntries = [
     },
     {
         term: 'Barrier B',
-        definition: 'Positive status effect that deals damage to the enemy monster with damage based on the Attack stat of the affected monster.',
+        definition: 'Positive status effect that deals damage to the enemy monster with damage based on the Attack stat of the affected monster. Lowers MaxHP stat of attacker but returns to normal after combat.',
     },
     {
         term: 'Barrier C',
