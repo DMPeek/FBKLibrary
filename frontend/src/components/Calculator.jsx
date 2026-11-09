@@ -33,6 +33,8 @@ function displayValue(val) {
   return val;
 }
 
+// Next three blocks of code create a data-driven glossary resolver for dynamic link mapping
+
 // Normalize punctuation and capitalization so equivalent labels use the same lookup key.
 function normalizeGlossaryTerm(value) {
   return String(value ?? '')
