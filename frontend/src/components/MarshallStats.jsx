@@ -1,7 +1,8 @@
 import '../styles.css';
+import { glossaryEntries } from '../assets/glossary';
 
 export default function MarshallStats() {
-return (
+    return (
         <div>
             <header className="header-bar">
                 <div className="header-left">
