@@ -282,6 +282,12 @@ body {
     color: skyblue;
 }
 
+.speed-glossary-link span {
+  text-decoration: underline;
+  text-decoration-color: #ffb300;
+  text-underline-offset: 2px;
+}
+
 /* Keep anchored glossary rows clear of the fixed navigation bar. */
 .glossary-entry-row[id] {
     scroll-margin-top: 72px;

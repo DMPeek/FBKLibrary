@@ -125,7 +125,7 @@ function MonsterCard({ monster, level, onLevelChange, statCompare }) {
         <div className="monster-field"><span>ATK:</span> <span style={getStatColor('atk')}>{displayValue(stats[1])}</span></div>
         <div className="monster-field"><span>DEF:</span> <span style={getStatColor('def')}>{displayValue(stats[2])}</span></div>
         <div className="monster-field"><span>Luck:</span> <span>{displayValue(monster.luck)}</span></div>
-        <div className="monster-field"><span>Speed:</span> <span>{displayValue(monster.speed)}</span></div>
+        <div className="monster-field"><a className='speed-glossary-link' href='/Glossary#speed'><span >Speed:</span></a> <span>{displayValue(monster.speed)}</span></div>
       </div>
         {/* Link glossary-matched effect and ability names while leaving unlock levels as plain text. */}
       <div className="monster-field"><span>Battle Arts Effect:</span> <span><GlossaryValue value={monster.attackEffect} /> ({displayValue(monster.attackEffectUnlockLvl)})</span></div>
