@@ -12,6 +12,7 @@ return (
                     <a href="/Orbs">Orbs</a>
                     <a href="/TeamBuilder">Team Builder</a>
                     <a href="/Glossary">Glossary</a>
+                    <a href="/MarshallStats">Marshall Stats</a>
                 </nav>
             </header>
             <main className="main-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100vw', minHeight: 'calc(100vh - 56px)', boxSizing: 'border-box', marginTop: '56px', padding: '32px 24px' }}>

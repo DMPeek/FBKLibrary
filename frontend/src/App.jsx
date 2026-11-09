@@ -3,6 +3,7 @@ import Calculator from './components/Calculator';
 import Orbs from './components/Orbs';
 import TeamBuilder from './components/TeamBuilder';
 import Glossary from './components/Glossary';
+import MarshallStats from './components/MarshallStats';
 import './styles.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/Orbs" element={<Orbs />} />
         <Route path="/TeamBuilder" element={<TeamBuilder />} />
         <Route path="/Glossary" element={<Glossary />} />
+        <Route path="/MarshallStats" element={<MarshallStats />} />
       </Routes>
       </BrowserRouter>
     </>

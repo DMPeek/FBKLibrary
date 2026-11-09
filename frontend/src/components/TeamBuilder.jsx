@@ -202,6 +202,7 @@ export default function TeamBuilder() {
                     <a href="/Orbs">Orbs</a>
                     <a href="/TeamBuilder">Team Builder</a>
                     <a href="/Glossary">Glossary</a>
+                    <a href="/MarshallStats">Marshall Stats</a>
                 </nav>
             </header>
             <main className="main-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '56px' }}>

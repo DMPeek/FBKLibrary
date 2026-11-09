@@ -414,6 +414,7 @@ export default function Compare() {
           <a href="/Orbs">Orbs</a>
           <a href="/TeamBuilder">Team Builder</a>
           <a href="/Glossary">Glossary</a>
+          <a href="/MarshallStats">Marshall Stats</a>
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
