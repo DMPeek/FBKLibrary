@@ -33,6 +33,37 @@ function displayValue(val) {
   return val;
 }
 
+// Normalize punctuation and capitalization so equivalent labels use the same lookup key.
+function normalizeGlossaryTerm(value) {
+  return String(value ?? '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+// Index glossary terms and aliases once; entries without IDs cannot be link destinations.
+const glossaryEntriesByName = new Map(
+  glossaryEntries
+    .filter(({ id }) => id)
+    .flatMap(entry =>
+      [entry.term, ...(entry.aliases ?? [])].map(name => [
+        normalizeGlossaryTerm(name),
+        entry,
+      ])
+    )
+);
+
+// Render a card value as a glossary link when its term or alias has a glossary destination.
+function GlossaryValue({ value }) {
+  const display = displayValue(value);
+  const entry = glossaryEntriesByName.get(normalizeGlossaryTerm(display));
+
+  if (!entry) return display;
+
+  return <a href={`/Glossary#${encodeURIComponent(entry.id)}`}>{display}</a>;
+}
+
 
 // sets up comparison specific monster cards
 function MonsterCard({ monster, level, onLevelChange, statCompare }) {
@@ -94,12 +125,13 @@ function MonsterCard({ monster, level, onLevelChange, statCompare }) {
         <div className="monster-field"><span>Luck:</span> <span>{displayValue(monster.luck)}</span></div>
         <div className="monster-field"><span>Speed:</span> <span>{displayValue(monster.speed)}</span></div>
       </div>
-      <div className="monster-field"><span>Battle Arts Effect:</span> <span>{displayValue(monster.attackEffect)} ({displayValue(monster.attackEffectUnlockLvl)})</span></div>
+        {/* Link glossary-matched effect and ability names while leaving unlock levels as plain text. */}
+      <div className="monster-field"><span>Battle Arts Effect:</span> <span><GlossaryValue value={monster.attackEffect} /> ({displayValue(monster.attackEffectUnlockLvl)})</span></div>
       <div className="monster-field"><span>Special Name:</span> <span>{displayValue(monster.specialName)} ({displayValue(monster.specialUnlockLvl)})</span></div>
       <div className="monster-field"><span>Special Description:</span> <span>{displayValue(monster.specialEffect)}</span></div>
-      <div className="monster-field"><span>Ability 1:</span> <span>{displayValue(monster.ability1)} ({displayValue(monster.ability1UnlockLvl)})</span></div>
-      <div className="monster-field"><span>Ability 2:</span> <span>{displayValue(monster.ability2)} ({displayValue(monster.ability2UnlockLvl)})</span></div>
-      <div className="monster-field"><span>Ability 3:</span> <span>{displayValue(monster.ability3)} ({displayValue(monster.ability3UnlockLvl)})</span></div>
+      <div className="monster-field"><span>Ability 1:</span> <span><GlossaryValue value={monster.ability1} /> ({displayValue(monster.ability1UnlockLvl)})</span></div>
+      <div className="monster-field"><span>Ability 2:</span> <span><GlossaryValue value={monster.ability2} /> ({displayValue(monster.ability2UnlockLvl)})</span></div>
+      <div className="monster-field"><span>Ability 3:</span> <span><GlossaryValue value={monster.ability3} /> ({displayValue(monster.ability3UnlockLvl)})</span></div>
     </div> // ^^^^^^^^^^^^ builds out the monster stats on the card from the hardcoded DB, plus stat colors for this one
   );
 }
@@ -383,7 +415,7 @@ export default function Compare() {
         </nav>
       </header>
       <main className="main-content compare-layout" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', minHeight: '100vh', width: '100vw', marginTop: '56px' }}>
-        <h2 style={{marginBottom: '24px', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting. Highest numbers for HP, ATK, DEF, and AP for the monsters will be highlighted <span style={{color:'#39ff14'}}>GREEN</span> while lower numbers are <span style={{color:'#ff3b3b'}}>RED</span></h2>
+        <h2 style={{marginBottom: '24px', textAlign: 'center', marginLeft: '100px', marginRight: '100px'}}>Select mons to look up stats for. Can pick 1-3 for comparing and contrasting. Highest numbers for HP, ATK, DEF, and AP for the monsters will be highlighted <span style={{color:'#39ff14'}}>GREEN</span> while lower numbers are <span style={{color:'#ff3b3b'}}>RED</span>. Click underlined terms to learn what they do in the glossary.</h2>
         <button
           onClick={() => {
             setSearch1('');

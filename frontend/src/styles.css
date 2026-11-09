@@ -272,6 +272,21 @@ body {
     font-weight: 500;
 }
 
+/* Keep glossary links readable in cards, with white text on hover. */
+.monster-card a,
+.monster-card a:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+.monster-card a:hover {
+    color: skyblue;
+}
+
+/* Keep anchored glossary rows clear of the fixed navigation bar. */
+.glossary-entry-row[id] {
+    scroll-margin-top: 72px;
+}
+
 .chat-section {
     width: 70vw;
     min-width: 400px;

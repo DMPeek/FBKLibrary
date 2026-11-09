@@ -30,8 +30,9 @@ export default function Glossary() {
                             </tr>
                         </thead>
                         <tbody>
-                            {glossaryEntries.map(({ term, definition }, index) => (
-                                <tr key={term} style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.16)', background: index % 2 === 1 ? 'rgba(255, 255, 255, 0.045)' : 'transparent' }}>
+                            {/* Put each glossary ID on its table row so card links can jump directly to it. */}
+                            {glossaryEntries.map(({ id, term, definition }, index) => (
+                                <tr id={id} key={term} className="glossary-entry-row" style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.16)', background: index % 2 === 1 ? 'rgba(255, 255, 255, 0.045)' : 'transparent' }}>
                                     <th scope="row" style={{ width: '20%', padding: '16px 20px', borderRight: '1px solid rgba(255, 179, 0, 0.38)', color: '#ffd45b', textAlign: 'left', verticalAlign: 'top', overflowWrap: 'anywhere' }}>{term}</th>
                                     <td style={{ width: '80%', padding: '16px 20px', verticalAlign: 'top', overflowWrap: 'anywhere' }}>{definition}</td>
                                 </tr>

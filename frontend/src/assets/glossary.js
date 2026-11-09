@@ -10,6 +10,12 @@ export const glossaryEntries = [
         definition: 'This is the number of actions a monster can take in battle. Action points decrease when using the following commands: Attack, Special, Item, and Guard.',
     },
     {
+        id: 'ap-drain',
+        aliases: ['AP-Drain 2'],
+        term: 'AP-Drain',
+        definition: 'Augments basic attacks to have a 25% chance to decrease enemy AP by 1.',
+    },
+    {
         id: 'armor',
         term: 'Armor',
         definition: 'A monster ability that reduces damage taken by the enemy monster basic attacks and special attacks by 20%.',
@@ -41,7 +47,7 @@ export const glossaryEntries = [
     },
     {
         term: 'Barrier C',
-        definition: 'Positive status effect that reduces the damage of non-combo special attacks that hit the affected monster by 50%.',
+        definition: 'Positive status effect that reduces the damage of non-combo special attacks that hit the affected monster by 25%.',
     },
     {
         term: 'Battle Arts Effect',
@@ -59,11 +65,12 @@ export const glossaryEntries = [
         definition: 'A monster ability that boosts the Attack stat of the monster with this ability by 1000 but applies the confusion status effect to the monster.',
     },
     {
+        id: 'blind',
         term: 'Blind',
         definition: 'Negative status effect that increases the chance the afflicted monster will miss a non-combo special attack.',
     },
     {
-        id: 'dulwark',
+        id: 'bulwark',
         term: 'Bulwark',
         definition: 'A monster ability that doubles the Defense stat of the monster with this ability.',
     },
@@ -81,6 +88,7 @@ export const glossaryEntries = [
         definition: 'This is the typing of the monster. It determines what equips the monster can use, as well as what weaknesses it has.',
     },
     {
+        id: 'confusion',
         term: 'Confusion',
         definition: 'Negative status effect that restricts the afflicted monster into only using basic attacks.',
     },
@@ -209,10 +217,13 @@ export const glossaryEntries = [
         definition: 'A monster ability that allows for use of the offensive school of magic.',
     },
     {
+        id: 'paralysis',
         term: 'Paralysis',
         definition: 'Negative status effect that prevents the afflicted monster from taking an action.',
     },
     {
+        id: 'poison',
+        aliases: ['Poison 1', 'Poison 2', 'Poison 3', 'Poison 4', 'Poison 5', 'Poison 6'],
         term: 'Poison',
         definition: 'Negative status effect that deals damage to the afflicted monster on each of their turns. Poison strength changes based on what applied the status.',
     },
@@ -224,6 +235,11 @@ export const glossaryEntries = [
         id: 'slime-reborn',
         term: 'Slime Reborn',
         definition: 'A monster ability that allows a monster to revive itself once per mission upon death.',
+    },
+    {
+        id: 'slow',
+        term: 'Slow',
+        definition: 'Augments basic attacks to increase enemy speed by 20 (this is bad for the enemy).',
     },
     {
         id: 'solar-adept',
@@ -280,6 +296,7 @@ export const glossaryEntries = [
         definition: 'Equipment that unlocks the use of the trader in a base to buy items.',
     },
     {
+        id: 'undodgeable',
         term: 'Undodgeable',
         definition: 'Augments only basic attacks to never miss their target.',
     },
